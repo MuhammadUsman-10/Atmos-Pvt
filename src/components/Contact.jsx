@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="container mx-auto px-20">
             <h2 className="text-4xl text-white font-bold text-center uppercase  mb-12 relative">
             Keep in Touch!
-            <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[2px] bg-white"></span>
+            <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
             </h2>
             <div className="flex flex-col md:flex-row md:space-x-12">
             {/* Contact Form */}

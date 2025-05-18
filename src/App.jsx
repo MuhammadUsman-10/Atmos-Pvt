@@ -2,6 +2,8 @@ import Header from './components/Header'
 import { useState, useEffect } from 'react'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Services from './components/Services'
+import About from './components/About'
 
 const phrases = [
   'Your operations, streamlined.',
@@ -46,7 +48,7 @@ function App() {
           <div className="h-16 mt-4 flex items-center justify-center relative overflow-hidden w-full">
             {/* Current phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? '-translate-y-20 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               key={phraseIndex}
@@ -55,7 +57,7 @@ function App() {
             </h1>
             {/* Next phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
               }`}
               key={nextPhraseIndex}
@@ -64,9 +66,10 @@ function App() {
             </h1>
           </div>
           {/* Subheading */}
-          <h2 className="text-xl md:text-5xl font-bold text-gray-400 text-center">
-            THE GOODS YOU NEED NOW !
+          <h2 className="text-xl md:text-2xl font-bold text-gray-400 text-center">
+            Advanced Task Management & Outsourcing & Services 
           </h2>
+          <p className='w-1/2 text-gray-300'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
           {/* Service Options */}
           <div className="flex flex-wrap justify-center items-center gap-2 mt-1 text-white text-xs md:text-base">
             <span className="opacity-80">WEB DESIGN</span>
@@ -80,21 +83,21 @@ function App() {
             <span className="opacity-80">COOL ANIMATIONS</span>
           </div>
           {/* Down Arrow and What We Do */}
-          <div className="flex flex-col items-center mt-5">
-            <svg className='w-14 h-14 animate-bounce' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="48px" height="56px"><path fillRule="evenodd" fill="rgb(255, 255, 255)" d="M0.006,0.004 L24.000,10.035 L47.994,0.004 L24.000,55.998 L0.006,0.004 Z"></path></svg>
-            <a href="#contact" className="mt-2 text-white font-semibold tracking-wide">WHAT WE DO?</a>
-          </div>
+          <a href="#about" className='' onClick={(e) => {
+            e.preventDefault();
+            document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+          }}>
+            <div className="flex flex-col items-center mt-5">
+              <svg className='w-14 h-14' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="48px" height="56px"><path fillRule="evenodd" fill="rgb(255, 255, 255)" d="M0.006,0.004 L24.000,10.035 L47.994,0.004 L24.000,55.998 L0.006,0.004 Z"></path></svg>
+              <p className="mt-2 text-white font-semibold tracking-wide">WHAT WE DO?</p>
+            </div>
+          </a>
         </div>
       </section>
 
-      {/* Placeholder Sections for Navigation */}
-      <section id="about" className="h-screen bg-gray-200 flex items-center justify-center">
-        <h2 className="text-4xl font-bold">About Section</h2>
-      </section>
-      <section id="services" className="h-screen bg-gray-300 flex items-center justify-center">
-        <h2 className="text-4xl font-bold">Services Section</h2>
-      </section>
-
+      {/* About Section */}
+      <About />
+      <Services />
       <Contact />
       <Footer />
     </div>

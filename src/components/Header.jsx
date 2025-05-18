@@ -29,6 +29,18 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [lastScrollY])
 
+    // Smooth scroll handler
+    const handleSmoothScroll = (e) => {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Close mobile menu after clicking a link
+        setIsMenuOpen(false);
+    };
+
     // Mobile header is always white
     const mobileHeaderClass = 'bg-white shadow-md border-b-[0.5px]';
 
@@ -62,10 +74,10 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-                <a href="#home" className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Home</a>
-                <a href="#about" className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>About</a>
-                <a href="#services" className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Services</a>
-                <a href="#contact" className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Contact</a>
+                <a href="#home" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Home</a>
+                <a href="#about" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>About</a>
+                <a href="#services" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Services</a>
+                <a href="#contact" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Contact</a>
             </div>
             <button className={`hidden md:flex px-6 py-2 rounded-md transition-colors duration-300 ${buttonBgClass}`}>
                 More
@@ -110,10 +122,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="bg-white flex flex-col space-y-6 p-6">
-                    <a href="#home" className="text-gray-800 hover:text-orange-400 text-lg">Home</a>
-                    <a href="#about" className="text-gray-800 hover:text-orange-400 text-lg">About</a>
-                    <a href="#services" className="text-gray-800 hover:text-orange-400 text-lg">Services</a>
-                    <a href="#contact" className="text-gray-800 hover:text-orange-400 text-lg">Contact</a>
+                    <a href="#home" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Home</a>
+                    <a href="#about" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">About</a>
+                    <a href="#services" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Services</a>
+                    <a href="#contact" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Contact</a>
                     <button className="bg-black text-white px-6 py-2 rounded-md hover:orange-400 transition-colors w-40">
                         More
                     </button>
