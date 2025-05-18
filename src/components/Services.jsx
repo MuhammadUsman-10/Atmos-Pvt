@@ -45,12 +45,12 @@ const Services = () => {
                                 <div className="flex items-center justify-center mb-5">
                                     <img src={card.icon} alt={card.title} className="w-16 h-16 bg-orange-400 rounded-full" />
                                 </div>
-                                <div className='h-40 my-3'>
+                                <div className='h-36 my-3'>
                                     <h3 className="text-xl text-center font-bold text-white mb-2">{card.title}</h3>
-                                    <p className="text-center text-gray-400">{card.description}</p>
+                                    <p className="text-center text-sm text-gray-300">{card.description}</p>
                                 </div>
                                 <div>
-                                    <a className='flex items-center justify-center gap-2'>
+                                    <a className='text-gray-300 flex items-center justify-center gap-2 cursor-pointer hover:text-orange-400 transition duration-300'>
                                         Learn More 
                                         <i className="fas fa-arrow-right mt-1" />
                                     </a>
