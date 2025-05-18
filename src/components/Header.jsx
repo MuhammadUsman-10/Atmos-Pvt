@@ -3,29 +3,56 @@ import { useState, useEffect } from 'react'
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+    const [isVisible, setIsVisible] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 40)
+            const currentScrollY = window.scrollY
+
+            // Check if scrolled past threshold for background change
+            setIsScrolled(currentScrollY > 40)
+
+            // Determine scroll direction and update visibility
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                setIsVisible(true)
+            } else if (currentScrollY > lastScrollY && currentScrollY > 40) {
+                // Scrolling down and past threshold
+                setIsVisible(false)
+            }
+
+            setLastScrollY(currentScrollY)
         }
+
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, [lastScrollY])
 
-    const headerClass = isScrolled
-        ? 'bg-white shadow-md border-b-[0.5px] fixed top-0'
-        : 'bg-transparent absolute top-0'
+    // Mobile header is always white
+    const mobileHeaderClass = 'bg-white shadow-md border-b-[0.5px]';
 
+    // Desktop header is transparent when not scrolled, white when scrolled
+    const desktopHeaderClass = isScrolled
+        ? 'md:bg-white md:shadow-md md:border-b-[0.5px]'
+        : 'md:bg-transparent md:shadow-none md:border-b-transparent';
+
+    const visibilityClass = isVisible
+        ? 'translate-y-0 opacity-100'
+        : '-translate-y-full opacity-0'
+
+    // Text color: dark on white bg (mobile and scrolled desktop), white on transparent bg (unscrolled desktop)
     const textColorClass = isScrolled
         ? 'text-gray-800'
-        : 'text-white'
+        : 'md:text-white text-gray-800';
 
+    // Button background/text color: Black on white (mobile and scrolled desktop), Orange on transparent (unscrolled desktop)
     const buttonBgClass = isScrolled
         ? 'bg-black text-white hover:text-black hover:bg-orange-400'
-        : 'bg-orange-400 text-black hover:bg-orange-300'
+        : 'md:bg-orange-400 md:text-black md:hover:bg-orange-300 bg-black text-white hover:text-black hover:bg-orange-400';
 
     return (
-        <header className={`${headerClass} w-full left-0 z-50 transition-all duration-300 ease-in-out`}>
+        <header className={`${mobileHeaderClass} ${desktopHeaderClass} ${visibilityClass} fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out`}>
         <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
             {/* Logo */}
@@ -63,11 +90,11 @@ const Header = () => {
 
             {/* Mobile Navigation - Side Menu */}
             <div 
-                className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+                className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-[60] ${
                     isMenuOpen ? '-translate-x-0' : '-translate-x-full'
                 }`}
             >
-                <div className='flex items-center justify-between mb-8 p-6'>
+                <div className='flex items-center justify-between p-6'>
                     <div className="text-2xl font-bold text-gray-800">
                         Atmos
                     </div>
@@ -82,7 +109,7 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-                <div className="flex flex-col space-y-6 p-6">
+                <div className="bg-white flex flex-col space-y-6 p-6">
                     <a href="#home" className="text-gray-800 hover:text-orange-400 text-lg">Home</a>
                     <a href="#about" className="text-gray-800 hover:text-orange-400 text-lg">About</a>
                     <a href="#services" className="text-gray-800 hover:text-orange-400 text-lg">Services</a>

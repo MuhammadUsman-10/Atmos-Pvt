@@ -36,18 +36,18 @@ function App() {
     <div className="min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section id="home" className="flex flex-col items-center justify-center text-center py-16 bg-black text-white">
-        <div className="flex flex-col items-center mt-30 mb-8">
+      <section id="home" className="flex flex-col items-center justify-center text-center py-16  text-white">
+        <div className="w-full flex flex-col items-center mt-30 mb-8">
           {/* Logo */}
           <div className="rounded-full w-32 h-32 flex items-center justify-center mb-8">
             <img src="/icon-01.png" alt="Logo" className="w-40" />
           </div>
           {/* Animated Phrases with vertical slide */}
-          <div className="h-16 mt-4 flex items-center justify-center relative overflow-hidden w-full" style={{minWidth: '320px'}}>
+          <div className="h-16 mt-4 flex items-center justify-center relative overflow-hidden w-full">
             {/* Current phrase */}
             <h1
-              className={`absolute w-full text-4xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
-                isAnimating ? '-translate-y-10 opacity-0' : 'translate-y-0 opacity-100'
+              className={`absolute w-full text-3xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+                isAnimating ? '-translate-y-20 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               key={phraseIndex}
             >
@@ -55,8 +55,8 @@ function App() {
             </h1>
             {/* Next phrase */}
             <h1
-              className={`absolute w-full text-4xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
-                isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              className={`absolute w-full text-3xl md:text-5xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+                isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
               }`}
               key={nextPhraseIndex}
             >
