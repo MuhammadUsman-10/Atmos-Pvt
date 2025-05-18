@@ -3,7 +3,7 @@ import React from 'react'
 const WhyChooseUs = () => {
     return (
         <div className="py-10">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
                 <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
                     Why Choose Us
                     <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
                 <p className="text-lg text-center text-white my-12">
                     Why Security Companies Trust ATMOS.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
                     {/* Card 1: Industry-Focused */}
                     <div className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center">
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">

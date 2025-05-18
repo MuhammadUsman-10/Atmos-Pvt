@@ -31,7 +31,7 @@ const Services = () => {
     return (
         <section id="services" className="py-16">
             <div>
-                <div className="container mx-auto px-6">
+                <div className="container mx-auto md:px-6">
                 <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
                     Our Services
                     <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
@@ -39,7 +39,7 @@ const Services = () => {
                 <p className="text-lg text-center text-white my-12">
                     Specialized Outsourcing for the Security Industry
                 </p>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {cardData.map((card, index) => (
                             <div key={index} className="bg-[#1f1f1f] rounded-lg p-6 shadow-lg">
                                 <div className="flex items-center justify-center mb-5">
