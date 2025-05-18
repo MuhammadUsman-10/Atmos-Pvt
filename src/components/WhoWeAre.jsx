@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhoWeAre = () => {
     return (
-        <section className="py-16">
+        <div className="py-16">
             <div className="container mx-auto px-6">
                 <div className='flex flex-col md:flex-row justify-between'>
                     <div className='w-1/2'>
@@ -33,7 +33,7 @@ const WhoWeAre = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

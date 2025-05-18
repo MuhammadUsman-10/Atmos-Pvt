@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyChooseUs = () => {
     return (
-        <section className="py-10">
+        <div className="py-10">
             <div className="container mx-auto px-6">
                 <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
                     Why Choose Us
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
