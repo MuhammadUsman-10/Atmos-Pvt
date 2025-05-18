@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import TermsModal from './Terms&Conditions'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -8,7 +9,7 @@ const Footer = () => {
         <footer className="bg-black text-white py-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
-            <div className="text-sm mb-4 md:mb-0">
+            <div className="mb-4 md:mb-0">
             ATMOS &copy; {currentYear}. All rights reserved.
             </div>
 
@@ -22,9 +23,7 @@ const Footer = () => {
 
             {/* More Button */}
             <div>
-                <a href="" className=" text-white transition-colors">
-                    Terms & Conditions
-                </a>
+                <TermsModal />
             </div>
         </div>
         </footer>

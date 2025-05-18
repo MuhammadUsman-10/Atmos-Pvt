@@ -45,11 +45,11 @@ const Contact = () => {
                 <div className="space-y-2">
                 <div className="flex items-center">
                     <span className="font-medium text-white mr-2">Email:</span>
-                    <span className="text-white">linkbuildingagency@company.com</span>
+                    <span className="text-white">info@atmospvt.com</span>
                 </div>
                 <div className="flex items-center">
                     <span className="font-medium text-white mr-2">Phone:</span>
-                    <span className="text-white">+0718-111-0011</span>
+                    <span className="text-white">+129 455 99554</span>
                 </div>
                 <div className="flex items-center">
                     <span className="font-medium text-white mr-2">Location:</span>

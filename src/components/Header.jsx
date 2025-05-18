@@ -69,7 +69,7 @@ const Header = () => {
             <div className="flex items-center justify-between">
             {/* Logo */}
             <div className={`text-2xl font-bold transition-colors duration-300 ${textColorClass}`}>
-                Atmos
+                ATMOS
             </div>
 
             {/* Desktop Navigation */}
@@ -102,13 +102,13 @@ const Header = () => {
 
             {/* Mobile Navigation - Side Menu */}
             <div 
-                className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-[60] ${
+                className={`bg-white fixed top-0 left-0 h-full w-64 shadow-lg transform transition-transform duration-300 ease-in-out z-[60] ${
                     isMenuOpen ? '-translate-x-0' : '-translate-x-full'
                 }`}
             >
                 <div className='flex items-center justify-between p-6'>
                     <div className="text-2xl font-bold text-gray-800">
-                        Atmos
+                        ATMOS
                     </div>
                     <div className="flex justify-end">
                         <button
