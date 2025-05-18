@@ -6,9 +6,9 @@ import Services from './components/Services'
 import About from './components/About'
 
 const phrases = [
-  'Your operations, streamlined.',
-  'Your costs, optimized.',
-  'Your peace of mind, guaranteed.'
+  'Your operations, streamlined',
+  'Your costs, optimized',
+  'Your peace of mind, guaranteed'
 ]
 
 function App() {
@@ -38,8 +38,8 @@ function App() {
     <div className="min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section id="home" className="flex flex-col items-center justify-center text-center py-16  text-white">
-        <div className="w-full flex flex-col items-center mt-30 mb-8">
+      <section id="home" className="flex flex-col items-center justify-center text-center pt-16 text-white">
+        <div className="w-full flex flex-col items-center justify-center mt-14 mb-8">
           {/* Logo */}
           <div className="rounded-full w-32 h-32 flex items-center justify-center mb-8">
             <img src="/icon-01.png" alt="Logo" className="w-40" />
@@ -48,7 +48,7 @@ function App() {
           <div className="h-16 mt-4 flex items-center justify-center relative overflow-hidden w-full">
             {/* Current phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-[40px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? '-translate-y-20 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               key={phraseIndex}
@@ -57,7 +57,7 @@ function App() {
             </h1>
             {/* Next phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-4xl font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-[40px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
               }`}
               key={nextPhraseIndex}
@@ -66,10 +66,10 @@ function App() {
             </h1>
           </div>
           {/* Subheading */}
-          <h2 className="text-xl md:text-2xl font-bold text-gray-400 text-center">
+          <h2 className="text-xl md:text-[27px] font-bold text-gray-400 text-center">
             Advanced Task Management & Outsourcing & Services 
           </h2>
-          <p className='w-1/2 text-gray-300'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
+          <p className='w-[55%] text-lg text-gray-300 my-2'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
           {/* Service Options */}
           <div className="flex flex-wrap justify-center items-center gap-2 mt-1 text-white text-xs md:text-base">
             <span className="opacity-80">WEB DESIGN</span>

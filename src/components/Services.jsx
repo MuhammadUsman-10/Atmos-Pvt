@@ -3,51 +3,63 @@ import React from 'react'
 const Services = () => {
     const cardData = [
         {
-            title: 'Service 1',
-            description: 'Description for service 1',
+            title: 'Dispatch Services',
+            description: '24/7 dispatching support with trained personnel who understand security protocols, urgency, and clear communication.',
             icon: '/icon-01.png'
         },
         {
-            title: 'Service 2',
-            description: 'Description for service 2',
-            icon: '/icon-02.png'
+            title: 'Scheduling',
+            description: 'Efficient workforce scheduling, shift coverage, and conflict resolution to keep your operations running smoothly.',
+            icon: '/icon-01.png'
         },
         {
-            title: 'Service 3',
-            description: 'Description for service 3',
-            icon: '/icon-03.png'
+            title: 'Virtual Assistants',
+            description: 'Administrative support tailored for security firms — from report handling to call management.',
+            icon: '/icon-01.png'
         },
         {
-            title: 'Service 2',
-            description: 'Description for service 2',
-            icon: '/icon-02.png'
+            title: 'Back-Office Support',
+            description: 'Data entry, invoicing, reporting, and admin tasks — handled with accuracy and confidentiality.',
+            icon: '/icon-01.png'
         },
         {
-            title: 'Service 3',
-            description: 'Description for service 3',
-            icon: '/icon-03.png'
+            title: 'Monitoring',
+            description: 'Surveillance assistance and alert management, integrated with your systems for proactive security.',
+            icon: '/icon-01.png'
         }
     ]
     return (
         <section id="services" className="py-16">
-                <div>
-            <div className="mb-40">
-                <div className="container mx-auto p-4">
-                    <div className="bg-white grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div>
+                <div className="container mx-auto px-6">
+                <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
+                    Our Services
+                    <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
+                </h2>
+                <p className="text-lg text-center text-white my-12">
+                    Specialized Outsourcing for the Security Industry
+                </p>
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                         {cardData.map((card, index) => (
-                            <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-lg">
-                                <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
-                                <p className="text-gray-400">{card.description}</p>
-                                <a className='flex items-center gap-2'>
-                                    Learn More 
-                                    <i className="fas fa-arrow-right mt-1" />
-                                </a>
+                            <div key={index} className="bg-[#1f1f1f] rounded-lg p-6 shadow-lg">
+                                <div className="flex items-center justify-center mb-5">
+                                    <img src={card.icon} alt={card.title} className="w-16 h-16 bg-orange-400 rounded-full" />
+                                </div>
+                                <div className='h-40 my-3'>
+                                    <h3 className="text-xl text-center font-bold text-white mb-2">{card.title}</h3>
+                                    <p className="text-center text-gray-400">{card.description}</p>
+                                </div>
+                                <div>
+                                    <a className='flex items-center justify-center gap-2'>
+                                        Learn More 
+                                        <i className="fas fa-arrow-right mt-1" />
+                                    </a>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-        </div>
         </section>
     )
 }
