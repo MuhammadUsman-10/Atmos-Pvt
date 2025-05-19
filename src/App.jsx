@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className="container mx-auto px-6 min-h-screen">
+    <div className="container mx-auto px-6 min-h-screen overflow-hidden">
       <Header />
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center pt-20 md:px-3 text-white">
