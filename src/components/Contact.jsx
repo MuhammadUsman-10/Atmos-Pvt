@@ -35,7 +35,7 @@ const Contact = () => {
         <section id='contact' className="py-16">
         <div className="container mx-auto md:px-6">
             <h2 className="text-4xl text-white font-bold text-center uppercase  mb-12 relative">
-            Keep in Touch!
+            Keep in <span className="text-orange-400">Touch!</span>
             <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
             </h2>
             <div className="flex flex-col md:flex-row md:space-x-12">
