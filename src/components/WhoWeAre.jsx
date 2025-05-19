@@ -1,14 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const WhoWeAre = () => {
     return (
         <div className="py-16">
             <div className="container mx-auto">
-                <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
-                    <div className='w-full lg:w-1/2'>
+                <motion.div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
+                    <motion.div 
+                        className='w-full lg:w-1/2'
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        viewport={{ once: true }}
+                    >
                         <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[400px] mt-10" />
-                    </div>
-                    <div className='w-full lg:w-1/2'>
+                    </motion.div>
+                    <motion.div 
+                        className='w-full lg:w-1/2'
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
                         <h2 className="text-2xl font-semibold text-white mb-4">
                             Who We Are
                         </h2>
@@ -30,8 +43,8 @@ const WhoWeAre = () => {
                                 <p>To become the go-to offshore operations partner for security companies worldwide.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     )
