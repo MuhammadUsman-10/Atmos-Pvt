@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const WhyChooseUs = () => {
     return (
@@ -13,9 +14,15 @@ const WhyChooseUs = () => {
                 </p>
                 <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
                     <div className='w-full lg:w-1/2'>
-                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[380px] mt-2" />
+                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[380px] mt-2 animate-fade-in-up" />
                     </div>
-                    <div className='w-full lg:w-1/2'>
+                    <motion.div 
+                        className='w-full lg:w-1/2'
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
                         <p className="text-base text-gray-300 mb-4">
                             <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong>
                             <br /><br />
@@ -60,7 +67,7 @@ const WhyChooseUs = () => {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
