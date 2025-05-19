@@ -20,13 +20,13 @@ const WhoWeAre = () => {
                         <div className='flex flex-col md:flex-row justify-between gap-4 relative items-center'>
                             <div className='w-full md:w-1/2 text-gray-300'>
                                 <h3 className='font-semibold mt-3 mb-2'>Our Mission</h3>
-                                <span className="w-24 h-[1px] bg-white block mb-2"></span>
+                                <span className="w-24 h-[1px] bg-orange-400 block mb-2"></span>
                                 <p>To provide reliable, secure, and cost-effective outsourcing solutions tailored to the needs of modern security firms.</p>
                             </div>
-                            <span className="hidden md:inline-block absolute left-1/2 transform -translate-x-1/2 -translate-y-[0%] w-[1px] h-22 mt-4 bg-white"></span>
+                            <span className="hidden md:inline-block absolute left-1/2 transform -translate-x-1/2 -translate-y-[0%] w-[1px] h-22 mt-4 bg-orange-400"></span>
                             <div className='w-full md:w-1/2 md:pl-2 text-gray-300'>
                                 <h3 className='font-semibold mt-3 mb-2'>Our Vision</h3>
-                                <span className="w-24 h-[1px] bg-white block mb-2"></span>
+                                <span className="w-24 h-[1px] bg-orange-400 block mb-2"></span>
                                 <p>To become the go-to offshore operations partner for security companies worldwide.</p>
                             </div>
                         </div>

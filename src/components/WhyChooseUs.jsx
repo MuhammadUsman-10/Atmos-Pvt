@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
             <div className="container mx-auto">
                 <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
                     Why Choose Us
-                    <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
+                    <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
                 </h2>
                 <p className="text-lg text-center text-white my-12">
                     Why Security Companies Trust ATMOS.

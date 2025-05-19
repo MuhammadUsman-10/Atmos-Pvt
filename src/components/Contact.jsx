@@ -1,17 +1,47 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+    const [isSending, setIsSending] = useState(false);
+    const [responseMsg, setResponseMsg] = useState('');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSending(true);
+
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,    // replace with your actual service ID
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,   // replace with your actual template ID
+            form.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY     // replace with your public key
+        )
+        .then(
+            (result) => {
+                console.log(result.text);
+                setResponseMsg('Message sent successfully!');
+                setIsSending(false);
+                form.current.reset();
+            },
+            (error) => {
+                console.log(error.text);
+                setResponseMsg('Something went wrong. Please try again later.');
+                setIsSending(false);
+            }
+        );
+    };
+
     return (
         <section id='contact' className="py-16">
         <div className="container mx-auto md:px-6">
             <h2 className="text-4xl text-white font-bold text-center uppercase  mb-12 relative">
             Keep in Touch!
-            <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-white"></span>
+            <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
             </h2>
             <div className="flex flex-col md:flex-row md:space-x-12">
             {/* Contact Form */}
             <div className="md:w-1/2">
-                <form className="space-y-5">
+                <form ref={form} onSubmit={sendEmail} className="space-y-5">
                 {/* <div className='flex flex-col md:flex-row gap-3'> */}
                 <div className=''>
                     <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
@@ -27,10 +57,12 @@ const Contact = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full justify-center py-3 px-4 border-[0.5px] border-gray-400 hover:border-transparent hover:text-black shadow-sm text-sm uppercase font-medium rounded-sm text-gray-400 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-colors delay-300"
+                    disabled={isSending}
+                    className="w-full justify-center py-3 px-4 border-[0.5px] border-gray-400 hover:border-transparent cursor-pointer hover:text-black shadow-sm text-sm uppercase font-medium rounded-sm text-gray-400 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-colors delay-100"
                 >
-                    Send
+                    {isSending ? 'Sending...' : 'Send'}
                 </button>
+                {responseMsg && <p className="text-white text-sm mt-3">{responseMsg}</p>}
                 </form>
             </div>
 

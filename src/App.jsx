@@ -38,7 +38,7 @@ function App() {
     <div className="container mx-auto px-6 min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section id="home" className="flex flex-col items-center justify-center text-center pt-16 md:px-6 text-white">
+      <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center pt-20 md:px-3 text-white">
         <div className="w-full flex flex-col items-center justify-center mt-14 mb-8">
           {/* Logo */}
           <div className="rounded-full w-32 h-32 flex items-center justify-center mb-8">
@@ -48,7 +48,7 @@ function App() {
           <div className="h-32 md:h-20 mt-4 flex items-center justify-center relative overflow-hidden w-full">
             {/* Current phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-[40px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-[38px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? '-translate-y-20 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               key={phraseIndex}
@@ -57,7 +57,7 @@ function App() {
             </h1>
             {/* Next phrase */}
             <h1
-              className={`absolute w-full text-3xl md:text-[40px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
+              className={`absolute w-full text-3xl md:text-[38px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
                 isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
               }`}
               key={nextPhraseIndex}
@@ -66,32 +66,37 @@ function App() {
             </h1>
           </div>
           {/* Subheading */}
-          <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold text-gray-300 text-center">
+          {/* <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold text-gray-300 text-center">
             Advanced Task Management & Outsourcing & Services 
-          </h2>
-          <p className='w-full md:w-[94%] lg:w-[77%] text-base md:text-lg text-gray-300 px-2 sm:px-0 my-4 md:my-2'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
+          </h2> */}
+          <p className='w-full md:w-[94%] lg:w-[77%] text-base md:text-lg text-gray-300 px-2 sm:px-2 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
           {/* Service Options */}
           <div className="flex flex-wrap justify-center items-center gap-2 mt-1 text-white text-xs md:text-base">
-            <span className="opacity-80">WEB DESIGN</span>
+            <span className="uppercase opacity-80">Dispatch Services</span>
             <span className="text-orange-400">•</span>
-            <span className="opacity-80">ONE PAGE</span>
+            <span className="uppercase opacity-80">Scheduling</span>
             <span className="text-orange-400">•</span>
-            <span className="opacity-80">ANALYSTIC</span>
+            <span className="uppercase opacity-80">Virtual Assistants</span>
             <span className="text-orange-400">•</span>
-            <span className="opacity-80">PHOTOGRAPHY</span>
+            <span className="uppercase opacity-80">Back-Office Support</span>
             <span className="text-orange-400">•</span>
-            <span className="opacity-80">COOL ANIMATIONS</span>
+            <span className="uppercase opacity-80">Monitoring</span>
           </div>
           {/* Down Arrow and What We Do */}
+          <div className="flex flex-col sm:flex-row items-center  gap-5 mt-5">
           <a href="#about" className='' onClick={(e) => {
             e.preventDefault();
             document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
           }}>
-            <div className="flex flex-col items-center mt-5">
-              <svg className='w-14 h-14' xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="48px" height="56px"><path fillRule="evenodd" fill="rgb(255, 255, 255)" d="M0.006,0.004 L24.000,10.035 L47.994,0.004 L24.000,55.998 L0.006,0.004 Z"></path></svg>
-              <p className="mt-2 text-white font-semibold uppercase tracking-wide">Learn More</p>
-            </div>
+            <p className="mt-2 text-white rounded-md hover:text-black hover:bg-orange-400 border border-orange-400 hover:border-transparent px-3 py-2 font-semibold tracking-wide transition delay-150">Learn More</p>
           </a>
+          <a href="#contact" className='' onClick={(e) => {
+            e.preventDefault();
+            document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+          }}>
+            <p className="mt-2 text-black rounded-md hover:text-white bg-orange-400 border border-transparent hover:bg-black hover:border-orange-400 px-3 py-2 font-semibold tracking-wide transition delay-150">Get In Touch</p>
+          </a>
+          </div>
         </div>
       </section>
 

@@ -46,7 +46,7 @@ const Header = () => {
 
     // Desktop header is transparent when not scrolled, white when scrolled
     const desktopHeaderClass = isScrolled
-        ? 'md:bg-white md:shadow-md md:border-b-[0.5px]'
+        ? 'font-medium md:bg-orange-400 md:shadow-md md:border-b-[0.5px]'
         : 'md:bg-transparent md:shadow-none md:border-b-transparent';
 
     const visibilityClass = isVisible
@@ -60,7 +60,7 @@ const Header = () => {
 
     // Button background/text color: Black on white (mobile and scrolled desktop), Orange on transparent (unscrolled desktop)
     const buttonBgClass = isScrolled
-        ? 'bg-black text-white hover:text-black hover:bg-orange-400'
+        ? 'bg-black text-white border border-transparent hover:text-black hover:bg-orange-400 hover:border-black'
         : 'md:bg-orange-400 md:text-black md:hover:bg-orange-300 bg-black text-white hover:text-black hover:bg-orange-400';
 
     return (
@@ -79,7 +79,7 @@ const Header = () => {
                 <a href="#services" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Services</a>
                 <a href="#contact" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Contact</a>
             </div>
-            <button className={`hidden md:flex px-6 py-2 rounded-md transition-colors duration-300 ${buttonBgClass}`}>
+            <button className={`hidden md:flex px-6 py-2 rounded-md cursor-pointer transition-colors duration-300 ${buttonBgClass}`}>
                 More
             </button>
 
@@ -102,7 +102,7 @@ const Header = () => {
 
             {/* Mobile Navigation - Side Menu */}
             <div 
-                className={`bg-white fixed top-0 left-0 h-full w-64 shadow-lg transform transition-transform duration-300 ease-in-out z-[60] ${
+                className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-[50] ${
                     isMenuOpen ? '-translate-x-0' : '-translate-x-full'
                 }`}
             >
