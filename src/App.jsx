@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Services from './components/Services'
@@ -16,6 +16,8 @@ function App() {
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [nextPhraseIndex, setNextPhraseIndex] = useState(1)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,11 +31,33 @@ function App() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate scroll progress
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.pageYOffset / totalHeight) * 100;
+      setScrollProgress(progress);
+      
+      // Show/hide scroll to top button
+      setShowScrollTop(window.pageYOffset > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Helper to split and color after comma
   const renderPhrase = (phrase) => {
     const [first, second] = phrase.split(',')
     return <>{first},{' '}<span className="text-orange-400">{second?.trim()}</span></>
   }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="container mx-auto px-6 min-h-screen overflow-hidden">
@@ -47,8 +71,9 @@ function App() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}>
           {/* Logo */}
-          <div className="flex justify-center my-8">
-            <img src="/logo-circle.png" alt="Logo" className="w-52" />
+          <div className="flex justify-center my-8 relative">
+          <span className="absolute top-[0px] -z-0 rounded-full w-[200px] h-[200px] bg-orange-400 blur-3xl"></span>
+            <img src="/logo-circle.png" alt="Logo" className="z-0 w-52" />
           </div>
           {/* Animated Phrases with vertical slide */}
           <div className="h-32 md:h-20 mt-4 flex items-center justify-center relative overflow-hidden w-full">
@@ -105,6 +130,28 @@ function App() {
           </div>
         </motion.div>
       </section>
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg cursor-pointer group"
+            style={{
+              background: `conic-gradient(from 0deg at 50% 50%, 
+                rgb(255,137,4) ${scrollProgress}%, 
+                rgb(98,58,12) ${scrollProgress}%)`
+            }}
+          >
+            <div className="bg-[#111111] rounded-full p-2 transform group-hover:-translate-y-1 transition-transform">
+              <img src="/top-icon.svg" type='svg/xml' className="w-5 h-5 text-orange-400 dark:text-orange-500" />
+            </div>
+          </motion.button>
+        )}
+      </AnimatePresence>
 
       {/* About Section */}
       <About />

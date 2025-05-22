@@ -5,7 +5,7 @@ const CEO = () => {
     return (
         <div className="py-16">
             <div className="container mx-auto">
-                <motion.div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
+                <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
                     <motion.div 
                         className='w-full lg:w-1/2 mt-4 p-5'
                         initial={{ x: -100, opacity: 0 }}
@@ -23,9 +23,7 @@ const CEO = () => {
                             We're committed to building long-lasting relationships with our clients, and we're excited to have you join our community.
                         </p>
                     </motion.div>
-                    <motion.div 
-                        className='w-full lg:w-1/2 relative'
-                    >
+                    <div className='w-full lg:w-1/2 relative'>
                         <motion.div 
                             className="-z-10 rounded-lg absolute top-[20px] right-[-105px] transform -translate-x-1/2 w-[290px] h-[270px] bg-orange-400"
                             initial={{ x: 100, opacity: 0 }}
@@ -39,8 +37,8 @@ const CEO = () => {
                             viewport={{ once: true }}>
                             <img src="/ceo.jpeg" alt="CEO Image" className="rounded-lg mx-auto w-[480px] h-[280px] mt-8" />
                         </motion.div>
-                    </motion.div>
-                </motion.div>
+                    </div>
+                </div>
             </div>
         </div>
     )

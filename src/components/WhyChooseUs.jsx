@@ -50,8 +50,9 @@ const WhyChooseUs = () => {
 
                 <div className='flex flex-col items-center justify-center relative md:mt-26 md:mb-20 lg:py-10 md:h-[630px]' >
                     {/* Central Image */}
-                    <div className='hidden md:inline-block relative z-10'>
-                        <img src="/logo-circle.png" alt="Logo" className="w-30 lg:w-48 xl:w-56" />
+                    <div className='hidden md:flex relative'>
+                        <span className="-z-0 absolute top-[12px] left-[14px] rounded-full w-[200px] h-[200px] bg-orange-400 blur-3xl"></span>
+                        <img src="/logo-circle.png" alt="Logo" className="z-0 w-30 lg:w-48 xl:w-56" />
                     </div>
 
                     {/* Feature Items Container */}

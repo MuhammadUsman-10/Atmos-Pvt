@@ -69,16 +69,18 @@ const Header = () => {
         <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className=''>
+            <a href='#home' onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }}>
                 <img src="logo.png" alt="" className='w-full h-12 object-contain'/>
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
                 <a href="#home" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Home</a>
                 <a href="#about" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>About</a>
                 <a href="#services" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Services</a>
-                <a href="#contact" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Contact</a>
             </div>
             <a href="#contact" className={`hidden md:flex px-6 py-2 rounded-md cursor-pointer transition-colors duration-300 ${buttonBgClass}`}
                 onClick={(e) => {
@@ -98,7 +100,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`${textColorClass} hover:text-orange-400 focus:outline-none transition-colors duration-300`}
                 >
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6" fill="orange" viewBox="0 0 24 24" stroke="orange">
                     {isMenuOpen ? (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     ) : (
@@ -111,31 +113,30 @@ const Header = () => {
 
             {/* Mobile Navigation - Side Menu */}
             <div 
-                className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-[50] ${
+                className={`fixed top-0 left-0 min-h-screen w-64 bg-black shadow-lg transform transition-transform duration-300 ease-in-out z-[50] ${
                     isMenuOpen ? '-translate-x-0' : '-translate-x-full'
                 }`}
             >
                 <div className='flex items-center justify-between p-6'>
-                    <div className="text-2xl font-bold text-gray-800">
-                        ATMOS
+                    <div className="">
+                        <img src="logo.png" alt="" className='w-full h-12 object-contain'/>
                     </div>
                     <div className="flex justify-end">
                         <button
                             onClick={() => setIsMenuOpen(false)}
-                            className="text-gray-600 hover:text-gray-900 focus:outline-none"
+                            className=" focus:outline-none"
                         >
-                            <svg className="h-6 w-6" fill="black" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="h-6 w-6" fill="black" viewBox="0 0 24 24" stroke="orange">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                <div className="bg-white flex flex-col space-y-6 p-6">
-                    <a href="#home" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Home</a>
-                    <a href="#about" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">About</a>
-                    <a href="#services" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Services</a>
-                    <a href="#contact" onClick={handleSmoothScroll} className="text-gray-800 hover:text-orange-400 text-lg">Contact</a>
-                    <button className="bg-black text-white px-6 py-2 rounded-md hover:orange-400 transition-colors w-40">
+                <div className="bg-black flex flex-col space-y-6 p-6 mt-[-15px]">
+                    <a href="#home" onClick={handleSmoothScroll} className="text-orange-400 text-lg">Home</a>
+                    <a href="#about" onClick={handleSmoothScroll} className="text-orange-400 text-lg">About</a>
+                    <a href="#services" onClick={handleSmoothScroll} className="text-orange-400 text-lg">Services</a>
+                    <button className="bg-orange-400 text-black px-6 py-2 rounded-md transition-colors w-40">
                         More
                     </button>
                 </div>
