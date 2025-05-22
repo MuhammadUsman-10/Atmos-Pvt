@@ -48,9 +48,7 @@ function App() {
           viewport={{ once: true }}>
           {/* Logo */}
           <div className="flex justify-center my-8">
-          <div className="bg-gradient-to-br from-orange-300 to-orange-500 p-3 rounded-full shadow-lg blur-3xl">
-            <img src="/logo-circle.png" alt="Logo" className="w-52 rounded-full bg-white" />
-          </div>
+            <img src="/logo-circle.png" alt="Logo" className="w-52" />
           </div>
           {/* Animated Phrases with vertical slide */}
           <div className="h-32 md:h-20 mt-4 flex items-center justify-center relative overflow-hidden w-full">
