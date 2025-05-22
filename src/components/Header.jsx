@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -42,12 +43,12 @@ const Header = () => {
     };
 
     // Mobile header is always white
-    const mobileHeaderClass = 'bg-white shadow-md border-b-[0.5px]';
+    const mobileHeaderClass = 'bg-black shadow-md border-b-[0.5px]';
 
     // Desktop header is transparent when not scrolled, white when scrolled
     const desktopHeaderClass = isScrolled
-        ? 'font-medium md:bg-orange-400 md:shadow-md md:border-b-[0.5px]'
-        : 'md:bg-transparent md:shadow-none md:border-b-transparent';
+        ? 'md:bg-black md:shadow-md md:border-b-[0.5px]'
+        : 'md:bg-black md:shadow-none md:border-b-transparent';
 
     const visibilityClass = isVisible
         ? 'translate-y-0 opacity-100'
@@ -55,21 +56,21 @@ const Header = () => {
 
     // Text color: dark on white bg (mobile and scrolled desktop), white on transparent bg (unscrolled desktop)
     const textColorClass = isScrolled
-        ? 'text-gray-800'
-        : 'md:text-white text-gray-800';
+        ? 'text-white'
+        : 'md:text-white';
 
     // Button background/text color: Black on white (mobile and scrolled desktop), Orange on transparent (unscrolled desktop)
     const buttonBgClass = isScrolled
-        ? 'bg-black text-white border border-transparent hover:text-black hover:bg-orange-400 hover:border-black'
-        : 'md:bg-orange-400 md:text-black md:hover:bg-orange-300 bg-black text-white hover:text-black hover:bg-orange-400';
+        ? 'hover:bg-orange-400 hover:text-black border hover:border-transparent text-orange-400 bg-black border-orange-400'
+        : 'hover:bg-orange-400 hover:text-black border hover:border-transparent text-orange-400 bg-black border-orange-400';
 
     return (
         <header className={`${mobileHeaderClass} ${desktopHeaderClass} ${visibilityClass} fixed w-full top-0 left-0 z-50 transition-all duration-300 ease-in-out`}>
         <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className='w-20 h-10'>
-                <img src="logo.png" alt="" />
+            <div className=''>
+                <img src="logo.png" alt="" className='w-full h-12 object-contain'/>
             </div>
 
             {/* Desktop Navigation */}
@@ -79,9 +80,17 @@ const Header = () => {
                 <a href="#services" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Services</a>
                 <a href="#contact" onClick={handleSmoothScroll} className={`${textColorClass} hover:text-orange-400 transition-colors duration-300`}>Contact</a>
             </div>
-            <button className={`hidden md:flex px-6 py-2 rounded-md cursor-pointer transition-colors duration-300 ${buttonBgClass}`}>
-                More
-            </button>
+            <a href="#contact" className={`hidden md:flex px-6 py-2 rounded-md cursor-pointer transition-colors duration-300 ${buttonBgClass}`}
+                onClick={(e) => {
+                e.preventDefault();
+                document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }}
+            >
+                Contact Us
+            </a>
+            {/* <button to="contact" className={`hidden md:flex px-6 py-2 rounded-md cursor-pointer transition-colors duration-300 ${buttonBgClass}`}>
+                Contact Us
+            </button> */}
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">

@@ -2,6 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
+
+    const features = [
+        {
+          title: "Industry-Focused",
+          description: "We specialize in the security sector — we understand your operations, language, and pain points.",
+          position: { x: -120, y: -380 },
+        },
+        {
+          title: "Cost-Efficient",
+          description: "Achieve significant savings compared to in-house staffing without compromising quality.",
+          position: { x: 300, y: -245 },
+        },
+        {
+          title: "24/7 Coverage",
+          description: "Round-the-clock support tailored to your shift structures, including weekends and holidays.",
+          position: { x: 300, y: 60 },
+        },
+        {
+          title: "Trained Staff",
+          description: "All personnel are trained in security protocols and communication etiquette specific to dispatch and monitoring.",
+          position: { x: -120, y: 200 },
+        },
+        {
+          title: "Data Security",
+          description: "We take your confidentiality seriously, with secure systems and strict access controls.",
+          position: { x: -500, y: 60 },
+        },
+        {
+          title: "Scalable Teams",
+          description: "Easily scale up or down based on your needs — without the hassle of hiring and training.",
+          position: { x: -500, y: -245 },
+        },
+      ];
+      
+
     return (
         <div className="py-10">
             <div className="container mx-auto">
@@ -13,103 +48,44 @@ const WhyChooseUs = () => {
                     Why Security Companies Trust ATMOS.
                 </p>
 
-                <div className='flex flex-col items-center justify-center relative mt-26 py-10' style={{ minHeight: '630px' }}>
+                <div className='flex flex-col items-center justify-center relative md:mt-26 md:mb-20 lg:py-10 md:h-[630px]' >
                     {/* Central Image */}
-                    <div className='relative z-10'>
-                        <img src="/logo-circle.png" alt="Logo" className="w-56" />
+                    <div className='hidden md:inline-block relative z-10'>
+                        <img src="/logo-circle.png" alt="Logo" className="w-30 lg:w-48 xl:w-56" />
                     </div>
 
                     {/* Feature Items Container */}
-                    <div className='absolute inset-0 flex items-center justify-center my-20'>
-                        {/* Item 1: Industry-Focused (Top) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, x: 0 }}
-                            whileInView={{ opacity: 1, x: -120, y: -380 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                    {/* Desktop Layout */}
+                    <div className="absolute inset-0 items-center justify-center hidden md:flex">
+                    {features.map((feature, index) => (
+                        <motion.div
+                        key={index}
+                        className="absolute flex flex-col items-center text-center w-60"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1, x: feature.position.x, y: feature.position.y }}
+                        transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                        viewport={{ once: true }}
+                        style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                         >
-                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>Industry-Focused</h2>
-                            <p className='text-sm text-gray-300'>We specialize in the security sector — we understand your operations, language, and pain points.</p>
+                        <div className="mb-2">
+                            <img src="/logo-circle.png" alt="Icon" className="w-24" />
+                        </div>
+                        <h2 className="text-lg font-bold text-white mb-1">{feature.title}</h2>
+                        <p className="text-sm text-gray-300">{feature.description}</p>
                         </motion.div>
-
-                        {/* Item 2: Cost-Efficient (Top Right) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, x: 150, y: -100 }}
-                            whileInView={{ opacity: 1, x: 300, y: -245 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                             style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
-                        >
-                             <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>Cost-Efficient</h2>
-                            <p className='text-sm text-gray-300'>Achieve significant savings compared to in-house staffing without compromising quality.</p>
-                        </motion.div>
-
-                        {/* Item 3: 24/7 Coverage (Bottom Right) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, x: 150, y: 100 }}
-                            whileInView={{ opacity: 1, x: 300, y: -5 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
-                        >
-                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>24/7 Coverage</h2>
-                            <p className='text-sm text-gray-300'>Round-the-clock support tailored to your shift structures, including weekends and holidays.</p>
-                        </motion.div>
-
-                        {/* Item 4: Trained Staff (Bottom) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, y: 200 }}
-                            whileInView={{ opacity: 1, x: -120, y: 150 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
-                        >
-                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>Trained Staff</h2>
-                            <p className='text-sm text-gray-300'>All personnel are trained in security protocols and communication etiquette specific to dispatch and monitoring.</p>
-                        </motion.div>
-
-                        {/* Item 5: Data Security (Bottom Left) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, x: -300, y: 100 }}
-                            whileInView={{ opacity: 1, x: -500, y: -5 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
-                        >
-                            <div className='mb-2'>
-                                <img src="/logo-circle.png" alt="Icon" className="w-24" />
-                            </div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>Data Security</h2>
-                            <p className='text-sm text-gray-300'>We take your confidentiality seriously, with secure systems and strict access controls.</p>
-                        </motion.div>
-
-                        {/* Item 6: Scalable Teams (Top Left) */}
-                        <motion.div 
-                            className='absolute flex flex-col items-center text-center w-60' 
-                            initial={{ opacity: 0, x: -300, y: -100 }}
-                            whileInView={{ opacity: 1, x: -500, y: -245 }}
-                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
-                            viewport={{ once: true }}
-                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
-                        >
-                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
-                            <h2 className='text-lg font-bold text-white mb-1'>Scalable Teams</h2>
-                            <p className='text-sm text-gray-300'>Easily scale up or down based on your needs — without the hassle of hiring and training.</p>
-                        </motion.div>
+                    ))}
+                    </div>
+                    {/* Mobile Layout: Stack all features in column */}
+                    <div className="flex flex-col items-center space-y-10 md:hidden z-10">
+                    {features.map((feature, index) => (
+                        <div key={index} className="flex flex-col items-center text-center w-60">
+                        <img src="/logo-circle.png" alt="Icon" className="w-20 md:w-16 mb-2" />
+                        <h2 className="text-lg font-bold text-white mb-1">{feature.title}</h2>
+                        <p className="text-sm text-gray-300">{feature.description}</p>
+                        </div>
+                    ))}
                     </div>
                 </div>
-
-
             </div>
         </div>
     )

@@ -24,13 +24,21 @@ const CEO = () => {
                         </p>
                     </motion.div>
                     <motion.div 
-                        className='w-full lg:w-1/2'
-                        initial={{ x: 100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                        viewport={{ once: true }}
+                        className='w-full lg:w-1/2 relative'
                     >
-                        <img src="/ceo.jpeg" alt="CEO Image" className="mx-auto w-[400px] mt-10" />
+                        <motion.div 
+                            className="-z-10 rounded-lg absolute top-[20px] right-[-105px] transform -translate-x-1/2 w-[290px] h-[270px] bg-orange-400"
+                            initial={{ x: 100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
+                            viewport={{ once: true }}
+                        ></motion.div>
+                        <motion.div initial={{ x: 100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+                            viewport={{ once: true }}>
+                            <img src="/ceo.jpeg" alt="CEO Image" className="rounded-lg mx-auto w-[480px] h-[280px] mt-8" />
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </div>
