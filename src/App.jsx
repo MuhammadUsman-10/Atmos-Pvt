@@ -125,7 +125,7 @@ function App() {
             e.preventDefault();
             document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
           }}>
-            <p className="mt-2 text-black rounded-md hover:text-white bg-orange-400 border border-transparent hover:bg-black hover:border-orange-400 px-3 py-2 font-semibold tracking-wide transition delay-150">Get In Touch</p>
+            <p className="mt-2 text-black rounded-md hover:text-white bg-orange-400 border border-transparent hover:bg-[#111111] hover:border-orange-400 px-3 py-2 font-semibold tracking-wide transition delay-150">Get In Touch</p>
           </a>
           </div>
         </motion.div>
