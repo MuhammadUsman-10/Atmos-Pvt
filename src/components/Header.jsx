@@ -68,8 +68,8 @@ const Header = () => {
         <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className={`text-2xl font-bold transition-colors duration-300 ${textColorClass}`}>
-                ATMOS
+            <div className='w-20 h-10'>
+                <img src="logo.png" alt="" />
             </div>
 
             {/* Desktop Navigation */}

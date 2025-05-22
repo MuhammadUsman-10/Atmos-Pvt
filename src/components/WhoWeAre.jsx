@@ -13,7 +13,7 @@ const WhoWeAre = () => {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         viewport={{ once: true }}
                     >
-                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[400px] mt-10" />
+                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[400px] mt-16" />
                     </motion.div>
                     <motion.div 
                         className='w-full lg:w-1/2'
@@ -22,8 +22,9 @@ const WhoWeAre = () => {
                         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl font-semibold text-white mb-4">
+                        <h2 className="text-2xl font-semibold text-white mb-10 relative">
                             Who We Are
+                            <span className="absolute bottom-[-20px] left-0 w-24 h-[1px] bg-orange-400"></span>
                         </h2>
                         <p className="text-base text-gray-300 mb-4">
                             <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> is a professional outsourcing agency built to serve security companies. With a strong foundation in security dispatch and operations, we provide dedicated virtual teams that enhance your efficiency, reduce overhead, and ensure round-the-clock coverage.

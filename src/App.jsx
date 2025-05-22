@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Services from './components/Services'
@@ -39,10 +40,15 @@ function App() {
       <Header />
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center pt-20 md:px-3 text-white">
-        <div className="w-full flex flex-col items-center justify-center mt-14 mb-8">
+        <motion.div 
+          className="w-full flex flex-col items-center justify-center mt-14 mb-8"
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: -50 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}>
           {/* Logo */}
-          <div className="rounded-full w-32 h-32 flex items-center justify-center mb-8">
-            <img src="/icon-01.png" alt="Logo" className="w-40" />
+          <div className="justify-center mb-8">
+            <img src="/logo-circle.png" alt="Logo" className="w-52" />
           </div>
           {/* Animated Phrases with vertical slide */}
           <div className="h-32 md:h-20 mt-4 flex items-center justify-center relative overflow-hidden w-full">
@@ -97,7 +103,7 @@ function App() {
             <p className="mt-2 text-black rounded-md hover:text-white bg-orange-400 border border-transparent hover:bg-black hover:border-orange-400 px-3 py-2 font-semibold tracking-wide transition delay-150">Get In Touch</p>
           </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* About Section */}

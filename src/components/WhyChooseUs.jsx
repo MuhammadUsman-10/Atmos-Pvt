@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const WhyChooseUs = () => {
     return (
@@ -12,63 +12,104 @@ const WhyChooseUs = () => {
                 <p className="text-lg text-center text-white my-12">
                     Why Security Companies Trust ATMOS.
                 </p>
-                <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
-                    <div className='w-full lg:w-1/2'>
-                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[380px] mt-2 animate-fade-in-up" />
-                    </div>
-                    <motion.div 
-                        className='w-full lg:w-1/2'
-                        initial={{ x: 100, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        <p className="text-base text-gray-300 mb-4">
-                            <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong>
-                            <br /><br />
-                            We're not just another outsourcing provider — we're your operations partner.
-                        </p>
-                        <div className='flex flex-col md:flex-row justify-between gap-6 mt-6'>
-                            {/* Left bars */}
-                            <div className='w-full md:w-1/2 flex flex-col gap-4'>
-                                {[
-                                    { label: "Industry-Focused", value: 96 },
-                                    { label: "Cost Efficient", value: 95 },
-                                    { label: "24/7 Coverage", value: 92 },
-                                ].map((item, i) => (
-                                    <div key={i}>
-                                        <div className='flex justify-between mb-1 text-sm text-white'>
-                                            <span>{item.label}</span>
-                                            <span>{item.value}%</span>
-                                        </div>
-                                        <div className='w-full bg-gray-200 rounded-full h-2.5'>
-                                            <div className='bg-orange-400 h-2.5 rounded-full' style={{ width: `${item.value}%` }}></div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
 
-                            {/* Right bars */}
-                            <div className='w-full md:w-1/2 flex flex-col gap-4'>
-                                {[
-                                    { label: "Data Security", value: 98 },
-                                    { label: "Trained Staff", value: 95 },
-                                    { label: "Scalable Teams", value: 90 },
-                                ].map((item, i) => (
-                                    <div key={i}>
-                                        <div className='flex justify-between mb-1 text-sm text-white'>
-                                            <span>{item.label}</span>
-                                            <span>{item.value}%</span>
-                                        </div>
-                                        <div className='w-full bg-gray-200 rounded-full h-2.5'>
-                                            <div className='bg-orange-400 h-2.5 rounded-full' style={{ width: `${item.value}%` }}></div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
+                <div className='flex flex-col items-center justify-center relative mt-26 py-10' style={{ minHeight: '630px' }}>
+                    {/* Central Image */}
+                    <div className='relative z-10'>
+                        <img src="/logo-circle.png" alt="Logo" className="w-56" />
+                    </div>
+
+                    {/* Feature Items Container */}
+                    <div className='absolute inset-0 flex items-center justify-center my-20'>
+                        {/* Item 1: Industry-Focused (Top) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, x: 0 }}
+                            whileInView={{ opacity: 1, x: -120, y: -380 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>Industry-Focused</h2>
+                            <p className='text-sm text-gray-300'>We specialize in the security sector — we understand your operations, language, and pain points.</p>
+                        </motion.div>
+
+                        {/* Item 2: Cost-Efficient (Top Right) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, x: 150, y: -100 }}
+                            whileInView={{ opacity: 1, x: 300, y: -245 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                             style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                             <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>Cost-Efficient</h2>
+                            <p className='text-sm text-gray-300'>Achieve significant savings compared to in-house staffing without compromising quality.</p>
+                        </motion.div>
+
+                        {/* Item 3: 24/7 Coverage (Bottom Right) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, x: 150, y: 100 }}
+                            whileInView={{ opacity: 1, x: 300, y: -5 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>24/7 Coverage</h2>
+                            <p className='text-sm text-gray-300'>Round-the-clock support tailored to your shift structures, including weekends and holidays.</p>
+                        </motion.div>
+
+                        {/* Item 4: Trained Staff (Bottom) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, y: 200 }}
+                            whileInView={{ opacity: 1, x: -120, y: 150 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>Trained Staff</h2>
+                            <p className='text-sm text-gray-300'>All personnel are trained in security protocols and communication etiquette specific to dispatch and monitoring.</p>
+                        </motion.div>
+
+                        {/* Item 5: Data Security (Bottom Left) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, x: -300, y: 100 }}
+                            whileInView={{ opacity: 1, x: -500, y: -5 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                            <div className='mb-2'>
+                                <img src="/logo-circle.png" alt="Icon" className="w-24" />
+                            </div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>Data Security</h2>
+                            <p className='text-sm text-gray-300'>We take your confidentiality seriously, with secure systems and strict access controls.</p>
+                        </motion.div>
+
+                        {/* Item 6: Scalable Teams (Top Left) */}
+                        <motion.div 
+                            className='absolute flex flex-col items-center text-center w-60' 
+                            initial={{ opacity: 0, x: -300, y: -100 }}
+                            whileInView={{ opacity: 1, x: -500, y: -245 }}
+                            transition={{ duration: 1.0, ease: 'easeOut', delay: 0.2 }}
+                            viewport={{ once: true }}
+                            style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /* Base position */
+                        >
+                            <div className='mb-2'><img src="/logo-circle.png" alt="Icon" className="w-24" /></div> {/* Placeholder Icon */}
+                            <h2 className='text-lg font-bold text-white mb-1'>Scalable Teams</h2>
+                            <p className='text-sm text-gray-300'>Easily scale up or down based on your needs — without the hassle of hiring and training.</p>
+                        </motion.div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     )
