@@ -45,7 +45,7 @@ const Services = () => {
                         className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center"
                     >
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+                            <img src="/scheduling.svg" className="h-8 w-8 text-black" />
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Scheduling</h3>
                         <p className="text-white text-sm">
@@ -62,7 +62,7 @@ const Services = () => {
                         className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center"
                     >
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-2 14H6V8h12v10zm-2-10H8V6h8v2zm-1 11h2v1h-2zM4 6h16v2H4z"/></svg>
+                            <img src="/virtual-assistant.svg" className="h-8 w-8 text-black" />
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Virtual Assistants</h3>
                         <p className="text-white text-sm">
@@ -79,7 +79,7 @@ const Services = () => {
                         className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center"
                     >
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S13.66 5 12 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm8 2h-2.97c-.62 0-1.2-.27-1.61-.76-.8-.98-1.9-1.64-3.42-1.64s-2.62.66-3.42 1.64c-.41.49-1 .76-1.61.76H4c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm-4 5H8v-1c0-.68.27-1.33.75-1.88.71-.81 1.7-1.12 2.69-1.12s1.98.31 2.69 1.12c.48.55.75 1.2.75 1.88v1z"/></svg>
+                            <img src="/office-team.svg" className="h-8 w-8 text-black" />
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Back-Office Support</h3>
                         <p className="text-white text-sm">
@@ -96,7 +96,7 @@ const Services = () => {
                         className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center"
                     >
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S13.66 5 12 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm8 2h-2.97c-.62 0-1.2-.27-1.61-.76-.8-.98-1.9-1.64-3.42-1.64s-2.62.66-3.42 1.64c-.41.49-1 .76-1.61.76H4c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm-4 5H8v-1c0-.68.27-1.33.75-1.88.71-.81 1.7-1.12 2.69-1.12s1.98.31 2.69 1.12c.48.55.75 1.2.75 1.88v1z"/></svg>
+                            <img src="/monitoring.svg" className="h-8 w-8 text-black" />
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Monitoring</h3>
                         <p className="text-white text-sm">
@@ -113,7 +113,7 @@ const Services = () => {
                         className="bg-[#1f1f1f] rounded-lg shadow-md p-6 flex flex-col items-center text-center"
                     >
                         <div className="w-16 h-16 bg-orange-400 rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            <img src="/quality-workforce.svg" className="h-8 w-8 text-black" />
                         </div>
                         <h3 className="text-xl font-semibold text-white mb-3">Quality Workforce</h3>
                         <p className="text-white text-sm">
