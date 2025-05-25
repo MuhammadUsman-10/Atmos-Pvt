@@ -8,31 +8,37 @@ const WhyChooseUs = () => {
           title: "Industry-Focused",
           description: "We specialize in the security sector — we understand your operations, language, and pain points.",
           position: { x: -120, y: -380 },
+          icon: "/industry-focused.png",
         },
         {
           title: "Cost-Efficient",
           description: "Achieve significant savings compared to in-house staffing without compromising quality.",
           position: { x: 300, y: -245 },
+          icon: "/budget.svg"
         },
         {
           title: "24/7 Coverage",
           description: "Round-the-clock support tailored to your shift structures, including weekends and holidays.",
           position: { x: 300, y: 60 },
+          icon: "/24-7-coverage.png",
         },
         {
           title: "Trained Staff",
           description: "All personnel are trained in security protocols and communication etiquette specific to dispatch and monitoring.",
           position: { x: -120, y: 200 },
+          icon: "/trained-staff.png",
         },
         {
           title: "Data Security",
           description: "We take your confidentiality seriously, with secure systems and strict access controls.",
           position: { x: -500, y: 60 },
+          icon: "/data-security.svg",
         },
         {
           title: "Scalable Teams",
           description: "Easily scale up or down based on your needs — without the hassle of hiring and training.",
           position: { x: -500, y: -245 },
+          icon: "/scalable-team.svg", // Example icon path
         },
       ];
       
@@ -68,8 +74,8 @@ const WhyChooseUs = () => {
                         viewport={{ once: true }}
                         style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                         >
-                        <div className="mb-2">
-                            <img src="/logo-circle.png" alt="Icon" className="w-24" />
+                        <div className="w-20 items-center justify-center mb-2 bg-orange-400 px-4 py-4 rounded-full">
+                            <img src={feature.icon} alt="Icon" className="w-14" />
                         </div>
                         <h2 className="text-lg font-bold text-white mb-1">{feature.title}</h2>
                         <p className="text-sm text-gray-300">{feature.description}</p>

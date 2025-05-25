@@ -136,9 +136,13 @@ const Header = () => {
                     <a href="#home" onClick={handleSmoothScroll} className="text-orange-400 text-lg">Home</a>
                     <a href="#about" onClick={handleSmoothScroll} className="text-orange-400 text-lg">About</a>
                     <a href="#services" onClick={handleSmoothScroll} className="text-orange-400 text-lg">Services</a>
-                    <button className="bg-orange-400 text-black px-6 py-2 rounded-md transition-colors w-40">
-                        More
-                    </button>
+                    <a href="#contact" className="bg-orange-400 text-black text-center px-6 py-2 rounded-md transition-colors w-40"onClick={(e) => {
+                        e.preventDefault();
+                        document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
+                        Contact Us
+                    </a>
                 </div>
             </div>
 

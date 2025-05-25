@@ -60,10 +60,14 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto px-6 min-h-screen overflow-hidden">
+    <div className="max-w-[1536px] container mx-auto px-6 min-h-screen overflow-hidden relative">
       <Header />
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center pt-20 md:px-3 text-white">
+      <section id="home" className='relative'>
+        <div className='hidden lg:flex absolute mx-auto mt-[-70px] -z-0 overflow-hidden'>
+          <img src="/hero.png" alt="Hero Background Image" className="w-[1280px] h-[800px] object-contain overflow-hidden" />
+        </div>
+        <div className=" text-center md:px-3 pt-20 text-white relative">
         <motion.div 
           className="w-full flex flex-col items-center justify-center mt-14 mb-8"
           initial={{ opacity: 0, y: 0 }}
@@ -119,7 +123,7 @@ function App() {
             e.preventDefault();
             document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
           }}>
-            <p className="mt-2 text-white rounded-md hover:text-black hover:bg-orange-400 border border-orange-400 hover:border-transparent px-3 py-2 font-semibold tracking-wide transition delay-150">Learn More</p>
+            <p className="mt-2 text-white rounded-md hover:text-black bg-[#111111] hover:bg-orange-400 border border-orange-400 hover:border-transparent px-3 py-2 font-semibold tracking-wide transition delay-150">Learn More</p>
           </a>
           <a href="#contact" className='' onClick={(e) => {
             e.preventDefault();
@@ -129,6 +133,7 @@ function App() {
           </a>
           </div>
         </motion.div>
+        </div>
       </section>
 
       {/* Scroll to Top Button */}

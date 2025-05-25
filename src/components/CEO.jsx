@@ -25,7 +25,7 @@ const CEO = () => {
                     </motion.div>
                     <div className='w-full lg:w-1/2 relative'>
                         <motion.div 
-                            className="-z-10 rounded-lg absolute top-[20px] right-[-105px] transform -translate-x-1/2 w-[290px] h-[270px] bg-orange-400"
+                            className="-z-10 rounded-lg absolute top-[20px] md:right-[-65px] lg:right-[-160px] xl:right-[-105px] transform -translate-x-1/2 w-[290px] h-[270px] bg-orange-400"
                             initial={{ x: 100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
