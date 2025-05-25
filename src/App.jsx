@@ -144,7 +144,7 @@ function App() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg cursor-pointer group"
+            className="fixed hidden md:flex bottom-8 right-8 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg cursor-pointer group"
             style={{
               background: `conic-gradient(from 0deg at 50% 50%, 
                 rgb(255,137,4) ${scrollProgress}%, 
