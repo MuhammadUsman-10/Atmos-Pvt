@@ -13,7 +13,6 @@ const Services = () => {
             <div className="container mx-auto md:px-6">
                 <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
                     Our <span className="text-orange-400">Services</span>
-                    <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
                 </h2>
                 <p className="text-lg text-center text-black my-12">
                     Specialized Outsourcing for the Security Industry
