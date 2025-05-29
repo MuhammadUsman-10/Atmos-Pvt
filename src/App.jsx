@@ -65,11 +65,11 @@ function App() {
     <div className="max-w-[1536px] container mx-auto px-6 lg:px-0 overflow-hidden">
       <Header />
       {/* Hero Section */}
-        <div className='hidden hero-section md:inline-block absolute top-0 left-0 w-screen h-[100vh] -z-10'>
-          <img src={video} alt="Hero Background Image" className="w-full h-[800px] object-contain overflow-hidden" />
+        <div className='hidden hero-section md:inline-block absolute top-[-85px] left-0 w-screen min-h-screen -z-10'>
+          <img src={video} alt="Hero Background Image" className="w-full min-h-[800px] object-cover overflow-hidden" />
         </div>
       <section id="home" className='w-full container mx-auto overflow-hidden'>
-        <div className="max-w-[1440px] container mx-auto text-left md:px-6 h-[50%] my-auto text-white">
+        <div className="max-w-[1440px] container mx-auto text-left md:px-6 pt-20 my-auto text-white">
         <motion.div 
           className="w-full flex flex-col items-start justify-start my-20 lg:my-48"
           initial={{ opacity: 0, y: 0 }}

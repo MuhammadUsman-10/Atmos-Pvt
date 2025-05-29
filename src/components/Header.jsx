@@ -48,7 +48,7 @@ const Header = () => {
     // Desktop header is transparent when not scrolled, white when scrolled
     const desktopHeaderClass = isScrolled
         ? 'md:bg-black md:shadow-md md:border-b-[0.5px]'
-        : 'md:bg-black md:shadow-none md:border-b-transparent';
+        : 'md:bg-transparent md:shadow-none md:border-b-transparent';
 
     const visibilityClass = isVisible
         ? 'translate-y-0 opacity-100'
