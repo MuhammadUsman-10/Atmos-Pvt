@@ -5,6 +5,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Services from './components/Services'
 import About from './components/About'
+import video from '../public/atmos.mp4'
 
 const phrases = [
   'Your operations, streamlined',
@@ -60,63 +61,27 @@ function App() {
   };
 
   return (
-    <div className="max-w-[1536px] container mx-auto px-6 min-h-screen overflow-hidden relative">
+    <div className="max-w-[1536px] container mx-auto min-h-screen overflow-hidden relative">
       <Header />
       {/* Hero Section */}
       <section id="home" className='relative'>
-        <div className='hidden lg:flex absolute mx-auto mt-[-70px] -z-0 overflow-hidden'>
-          <img src="/hero.png" alt="Hero Background Image" className="w-[1280px] h-[800px] object-contain overflow-hidden" />
+        <div className='hidden lg:flex absolute mx-auto mt-10 -z-10 overflow-hidden'>
+          {/* <img src="/hero.png" alt="Hero Background Image" className="w-[1280px] h-[800px] object-contain overflow-hidden" /> */}
+          <video src={video} type="video/mp4" alt="Atmos Video" className='w-full min-h-screen' controls autoPlay loop />
         </div>
-        <div className=" text-center md:px-3 pt-20 text-white relative">
+        <div className="text-left md:px-6 pt-20 text-white relative">
         <motion.div 
-          className="w-full flex flex-col items-center justify-center mt-14 mb-8"
+          className="w-full flex flex-col items-start justify-start my-48"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: -50 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}>
-          {/* Logo */}
-          <div className="flex justify-center my-8 relative">
-          <span className="absolute top-[0px] -z-0 rounded-full w-[200px] h-[200px] bg-orange-400 blur-3xl"></span>
-            <img src="/logo-circle.png" alt="Logo" className="z-0 w-52" />
-          </div>
-          {/* Animated Phrases with vertical slide */}
-          <div className="h-32 md:h-20 mt-4 flex items-center justify-center relative overflow-hidden w-full">
-            {/* Current phrase */}
-            <h1
-              className={`absolute w-full text-3xl md:text-[38px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
-                isAnimating ? '-translate-y-20 opacity-0' : 'translate-y-0 opacity-100'
-              }`}
-              key={phraseIndex}
-            >
-              {renderPhrase(phrases[phraseIndex])}
-            </h1>
-            {/* Next phrase */}
-            <h1
-              className={`absolute w-full text-3xl md:text-[38px] font-extrabold text-white text-center tracking-tight uppercase transition-all duration-400 ${
-                isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-              }`}
-              key={nextPhraseIndex}
-            >
-              {renderPhrase(phrases[nextPhraseIndex])}
-            </h1>
-          </div>
+      
           {/* Subheading */}
-          {/* <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold text-gray-300 text-center">
-            Advanced Task Management & Outsourcing & Services 
-          </h2> */}
-          <p className='w-full md:w-[94%] lg:w-[77%] text-base md:text-lg text-gray-300 px-2 sm:px-2 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
-          {/* Service Options */}
-          <div className="flex flex-wrap justify-center items-center gap-2 mt-1 text-white text-xs md:text-base">
-            <span className="uppercase opacity-80">Dispatch Services</span>
-            <span className="text-orange-400">•</span>
-            <span className="uppercase opacity-80">Scheduling</span>
-            <span className="text-orange-400">•</span>
-            <span className="uppercase opacity-80">Virtual Assistants</span>
-            <span className="text-orange-400">•</span>
-            <span className="uppercase opacity-80">Back-Office Support</span>
-            <span className="text-orange-400">•</span>
-            <span className="uppercase opacity-80">Monitoring</span>
-          </div>
+          <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold text-gray-300 text-left">
+            Advanced Task Management & <br />Outsourcing & Services 
+          </h2>
+          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-gray-300 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
           {/* Down Arrow and What We Do */}
           <div className="flex flex-col sm:flex-row items-center  gap-5 mt-5">
           <a href="#about" className='' onClick={(e) => {
