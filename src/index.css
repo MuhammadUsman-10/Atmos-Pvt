@@ -2,12 +2,9 @@
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #e1e2e1;
+  background-color: #ffddaa;
 }
-.hero-section {
-  background: url('/atmos.mp4') no-repeat center center;
-  background-size: cover;
-}
+
 /* Fade-in-up animation */
 .animate-fade-in-up {
   opacity: 0;
