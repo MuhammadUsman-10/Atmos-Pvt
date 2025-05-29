@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Services from './components/Services'
 import About from './components/About'
 import video from '../public/atmos.mp4'
+import ReactPlayer from "react-player";
 
 const phrases = [
   'Your operations, streamlined',
@@ -67,7 +68,8 @@ function App() {
       <section id="home" className='relative'>
         <div className='hidden lg:flex absolute mx-auto mt-10 -z-10 overflow-hidden'>
           {/* <img src="/hero.png" alt="Hero Background Image" className="w-[1280px] h-[800px] object-contain overflow-hidden" /> */}
-          <video src={video} type="video/mp4" alt="Atmos Video" className='w-full min-h-screen' controls autoPlay loop />
+          {/* <video src={video} type="video/mp4" alt="Atmos Video" className='w-full min-h-screen' autoPlay loop /> */}
+          <ReactPlayer url="/atmos.mp4" type="video/mp4" alt="" width="100%" height="100vh" autoplay={true} loop={true} muted={true} playing={true} />
         </div>
         <div className="text-left md:px-6 pt-20 text-white relative">
         <motion.div 
