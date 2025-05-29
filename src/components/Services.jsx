@@ -11,11 +11,11 @@ const Services = () => {
     return (
         <section id="services" className="py-16">
             <div className="container mx-auto md:px-6">
-                <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
+                <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
                     Our <span className="text-orange-400">Services</span>
                     <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
                 </h2>
-                <p className="text-lg text-center text-white my-12">
+                <p className="text-lg text-center text-black my-12">
                     Specialized Outsourcing for the Security Industry
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">

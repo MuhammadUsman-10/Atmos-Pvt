@@ -46,11 +46,10 @@ const WhyChooseUs = () => {
     return (
         <div className="py-10">
             <div className="container mx-auto">
-                <h2 className="text-4xl font-bold text-center uppercase text-white mb-4 relative">
+                <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
                     Why <span className="text-orange-400">Choose</span> Us
-                    <span className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-24 h-[1px] bg-orange-400"></span>
                 </h2>
-                <p className="text-lg text-center text-white my-12">
+                <p className="text-lg text-center textblack my-12">
                     Why Security Companies Trust ATMOS.
                 </p>
 
@@ -77,8 +76,8 @@ const WhyChooseUs = () => {
                         <div className="w-20 items-center justify-center mb-2 bg-orange-400 px-4 py-4 rounded-full">
                             <img src={feature.icon} alt="Icon" className="w-14" />
                         </div>
-                        <h2 className="text-lg font-bold text-white mb-1">{feature.title}</h2>
-                        <p className="text-sm text-gray-300">{feature.description}</p>
+                        <h2 className="text-lg font-bold text-black mb-1">{feature.title}</h2>
+                        <p className="text-sm text-black">{feature.description}</p>
                         </motion.div>
                     ))}
                     </div>
