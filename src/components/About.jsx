@@ -10,8 +10,8 @@ const About = () => {
                 <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
                     <span className="text-orange-400">About</span> Us
                 </h2>
-                <CEO />
                 <WhoWeAre />
+                <CEO />
                 <WhyChooseUs />
             </div>
         </section>

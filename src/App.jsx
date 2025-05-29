@@ -62,30 +62,30 @@ function App() {
   };
 
   return (
-    <div className="max-w-[1536px] container mx-auto min-h-screen overflow-hidden relative">
+    <div className="max-w-[1536px] px-6 lg:px-0 overflow-hidden">
       <Header />
       {/* Hero Section */}
-      <section id="home" className='relative'>
-        <div className='hidden lg:flex absolute mx-auto mt-10 -z-10 overflow-hidden'>
+        <div className='hidden hero-section md:inline-block absolute top-0 left-0 w-screen h-[100vh] -z-10'>
           {/* <img src="/hero.png" alt="Hero Background Image" className="w-[1280px] h-[800px] object-contain overflow-hidden" /> */}
           {/* <video src={video} type="video/mp4" alt="Atmos Video" className='w-full min-h-screen' autoPlay loop /> */}
-          <ReactPlayer url="/atmos.mp4" type="video/mp4" alt="" width="100%" height="100vh" autoplay={true} loop={true} muted={true} playing={true} />
+          <ReactPlayer url="/atmos.mp4" type="video/mp4" alt="" className="object-cover pointer-events-none" width="100%" height="100vh" autoplay={true} loop={true} muted={true} playing={true} />
         </div>
-        <div className="text-left md:px-6 pt-20 text-white relative">
+      <section id="home" className='w-full md:min-h-screen overflow-hidden'>
+        <div className="max-w-[1320px] mx-auto text-left md:px-6 pt-20 text-white">
         <motion.div 
-          className="w-full flex flex-col items-start justify-start my-48"
+          className="w-full flex flex-col items-start justify-start my-20 lg:my-48"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: -50 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}>
       
           {/* Subheading */}
-          <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold text-gray-300 text-left">
-            Advanced Task Management & <br />Outsourcing & Services 
+          <h2 className="w-full lg:w-[40%] text-xl md:text-2xl lg:text-[28px] font-bold text-black lg:text-gray-300 text-left">
+            Advanced Task Management & Outsourcing & Services 
           </h2>
-          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-gray-300 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
+          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-black lg:text-gray-300 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
           {/* Down Arrow and What We Do */}
-          <div className="flex flex-col sm:flex-row items-center  gap-5 mt-5">
+          <div className="flex items-center gap-5 mt-5">
           <a href="#about" className='' onClick={(e) => {
             e.preventDefault();
             document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
