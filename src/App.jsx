@@ -5,8 +5,6 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Services from './components/Services'
 import About from './components/About'
-import video from '../public/atmos.gif'
-import ReactPlayer from "react-player";
 
 const phrases = [
   'Your operations, streamlined',
@@ -67,7 +65,7 @@ function App() {
       <Header />
       {/* Hero Section */}
         <div className='hidden hero-section md:inline-block absolute top-[-85px] left-0 w-screen min-h-screen -z-10'>
-          <img src={video} alt="Hero Background Image" className="w-full min-h-[800px] object-cover overflow-hidden" />
+          <img src="/atmos.gif" alt="Hero Background Image" className="w-full min-h-[800px] object-cover overflow-hidden" />
         </div>
       <section id="home" className='w-full container mx-auto overflow-hidden'>
         <div className="max-w-[1440px] container mx-auto text-left md:px-6 pt-20 my-auto text-white">
