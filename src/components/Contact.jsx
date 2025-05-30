@@ -84,11 +84,11 @@ const Contact = () => {
                 <motion.div className='-z-0'>
                     <span className="absolute top-[40px] left-[25%] -z-0 rounded-full w-[150px] h-[150px] bg-orange-400 blur-[100px]"></span>
                 </motion.div>
-                    <h3 className="text-2xl font-bold text-black mb-4">Let's Discuss How We Can Support Your Operations!</h3>
+                    <h3 className="text-2xl font-bold text-black mb-4">Let’s Take the Next Step — Together!</h3>
                     <p className="text-black mb-10 lg:w-[480px]">
-                        If you like to work with us then drop us a message using the contact form. Or get in touch using email, contact number.
-                        <br />
-                        See you!
+                        You’ve explored what ATMOS is all about — now let’s bring it to life.
+                        If you're thinking, “This could work for us” — you're probably right.
+                        Fill the form and we'll reach out soon.
                     </p>
                     <div className="space-y-2">
                         <div className="flex items-center">

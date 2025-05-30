@@ -26,19 +26,17 @@ const WhoWeAre = () => {
                             Who We Are
                         </h2>
                         <p className="text-base text-text-black mb-4">
-                            <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> is a professional outsourcing agency built to serve security companies. With a strong foundation in security dispatch and operations, we provide dedicated virtual teams that enhance your efficiency, reduce overhead, and ensure round-the-clock coverage.
-                            <br /><br />
-                            We're not just another outsourcing provider — we're your operations partner.
+                            <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> was founded by Haseeb Ahmad, a seasoned operations professional who’s worked hands-on with U.S.-based security firms—tackling everything from dispatch gaps and scheduling bottlenecks to overnight coverage and admin overload. Seeing these challenges firsthand, he launched ATMOS to deliver precision-driven, cost-effective support that plugs right into your existing operations.
                         </p>
                         <div className='flex flex-col md:flex-row justify-between gap-4 relative items-center'>
                             <div className='w-full md:w-1/2 text-black'>
-                                <h3 className='text-black font-semibold mt-3 mb-2'>Our Mission</h3>
-                                <p>To provide reliable, secure, and cost-effective outsourcing solutions tailored to the needs of modern security firms.</p>
+                                <div className='flex gap-2'><span className='mt-1 text-orange-400 text-3xl'>&#x2023;</span><p className='mt-3 mb-2'> <strong>24/7 SLA Compliance:</strong> 98% on-time dispatch & scheduling</p></div>
+                                <div className='flex gap-2'><span className='mt-1 text-orange-400 text-3xl'>&#x2023;</span><p className='mt-3 mb-2'> <strong>Cost Savings:</strong> Up to 50% lower operational overhead</p></div>
                             </div>
-                            <span className="hidden md:inline-block absolute left-1/2 transform -translate-x-1/2 -translate-y-[0%] w-[1px] h-22 mt-4 bg-orange-400"></span>
+                            <span className="hidden md:inline-block absolute left-1/2 transform -translate-x-1/2 -translate-y-[0%] w-[1px] h-32 mt-4 bg-orange-400"></span>
                             <div className='w-full md:w-1/2 md:pl-2 text-black'>
-                                <h3 className='text-black font-semibold mt-3 mb-2'>Our Vision</h3>
-                                <p>To become the go-to offshore operations partner for security companies worldwide.</p>
+                                <div className='flex gap-2'><span className='mt-1 text-orange-400 text-3xl'>&#x2023;</span><p className='mt-3 mb-2'> <strong>Dedicated Teams:</strong> U.S-aligned hours, trained for security-sector demands</p></div>
+                                <div className='flex gap-2'><span className='mt-1 text-orange-400 text-3xl'>&#x2023;</span><p className='mt-3 mb-2'> <strong>Secure & Scalable:</strong> ISO-grade data practices, rapid team ramp-up</p></div>
                             </div>
                         </div>
                     </motion.div>

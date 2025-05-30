@@ -62,6 +62,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="max-w-[1536px] container mx-auto px-6 lg:px-0 overflow-hidden">
       <Header />
       {/* Hero Section */}
@@ -79,9 +80,11 @@ function App() {
       
           {/* Subheading */}
           <h2 className="w-full lg:w-[40%] text-xl md:text-2xl lg:text-[28px] font-bold text-black lg:text-gray-300 text-left">
-            Advanced Task Management & Outsourcing & Services 
+            Outsourcing Made Easy
           </h2>
-          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-black lg:text-gray-300 my-4 md:my-2 md:mb-4'>At ATMOS Pvt, we empower security companies to operate more efficiently by providing professional dispatch, scheduling, monitoring, and back-office support — all through a skilled offshore team you can trust.</p>
+          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-black lg:text-gray-300 my-4 md:my-2 md:mb-4'>
+            Scale your security operations without the overhead.
+            <br />24/7 dispatch, scheduling & monitoring—by your dedicated offshore team.</p>
           {/* Down Arrow and What We Do */}
           <div className="flex items-center gap-5 mt-5">
           <a href="#about" className='' onClick={(e) => {
@@ -127,8 +130,9 @@ function App() {
       <About />
       <Services />
       <Contact />
-      <Footer />
     </div>
+      <Footer />
+    </>
   )
 }
 
