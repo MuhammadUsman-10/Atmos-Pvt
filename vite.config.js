@@ -6,5 +6,12 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    react()],
+    react(),
+    {
+      name: 'font-roboto',
+      content: `
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      `,
+    },
+  ],
 })

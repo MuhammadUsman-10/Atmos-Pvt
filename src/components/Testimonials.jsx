@@ -13,9 +13,9 @@ const Testimonials = () => {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         viewport={{ once: true }}>
                         <div className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                            <div className="rounded-full flex items-center justify-center mr-4">
                                 {/* Placeholder Icon/Avatar */}
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                <img src="/robin.jpeg" className="w-12 h-12 rounded-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold ">Robin Singh</h3>
@@ -34,9 +34,8 @@ const Testimonials = () => {
                         transition={{ duration: 0.8, ease: 'easeOut'}}
                         viewport={{ once: true }}>
                         <div className="flex items-center mb-4">
-                            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
-                                {/* Placeholder Icon/Avatar */}
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <img src="/jasmine.jpeg" className="w-12 h-12 rounded-full object-contain" />
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold">Jasmine Malik</h3>
