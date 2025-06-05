@@ -13,7 +13,7 @@ const WhoWeAre = () => {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         viewport={{ once: true }}
                     >
-                        <img src="https://muhammadusman-10.github.io/Link-Building-Website/images/illustrations/creative-team.svg" alt="ATMOS Logo" className="mx-auto w-[400px] mt-16" />
+                        <img src="/about-us.png" alt="ATMOS Logo" className=" w-[500px]" />
                     </motion.div>
                     <motion.div 
                         className='w-full lg:w-1/2'
