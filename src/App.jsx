@@ -61,13 +61,13 @@ function App() {
 
   return (
     <>
-    <div className="max-w-[1536px] container mx-auto px-6 lg:px-0 overflow-hidden">
+    <div className="max-w-[1536px] container mx-auto px-6 md:px-0 overflow-hidden">
       <Header />
       {/* Hero Section */}
-        <div className='hidden hero-section md:inline-block absolute top-[-85px] left-0 w-screen min-h-screen -z-10'>
+        {/* <div className='hidden hero-section md:inline-block absolute top-[-85px] left-0 w-screen min-h-screen -z-10'>
           <img src="/atmos.gif" alt="Hero Background Image" className="w-full min-h-[800px] object-cover overflow-hidden" />
-        </div>
-      <section id="home" className='w-full container mx-auto overflow-hidden'>
+        </div> */}
+      <section id="home" className='hero-section relative z-0 lg:px-2'>
         <div className="max-w-[1440px] container mx-auto text-left md:px-6 pt-20 my-auto text-white">
         <motion.div 
           className="w-full flex flex-col items-start justify-start my-20 lg:my-48"
@@ -77,10 +77,10 @@ function App() {
           viewport={{ once: true }}>
       
           {/* Subheading */}
-          <h2 className="w-full lg:w-[40%] text-xl md:text-2xl lg:text-[28px] font-bold text-black lg:text-gray-300 text-left">
+          <h2 className="w-full lg:w-[40%] text-xl md:text-2xl lg:text-3xl xxl:text-4xl font-bold text-black md:text-gray-300 text-left">
             Outsourcing Made Easy
           </h2>
-          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-black lg:text-gray-300 my-4 md:my-2 md:mb-4'>
+          <p className='w-full md:w-[74%] lg:w-[40%] text-base md:text-lg text-black md:text-gray-300 my-4 md:my-2 md:mb-4'>
             Scale your security operations without the overhead.
             <br />24/7 dispatch, scheduling & monitoring—by your dedicated offshore team.</p>
           {/* Down Arrow and What We Do */}

@@ -25,7 +25,7 @@ const CEO = () => {
                     </motion.div>
                     <div className='w-full lg:w-1/2 relative'>
                         <motion.div 
-                            className="-z-10 rounded-lg absolute top-[20px] md:right-[-65px] lg:right-[-160px] xl:right-[-105px] transform -translate-x-1/2 w-[290px] h-[270px] bg-orange-400"
+                            className="absolute -z-10 rounded-lg top-[20px] max-[425px]:right-[-10px] xs:right-[25px] xsm:right-[95px] sm:right-[45px] md:right-[85px] lg:right-[-15px] xl:right-[30px] xxl:right-[30px] 2xl:right-[90px] w-[200px] h-[200px] sm:w-[280px] sm:h-[260px] bg-orange-400"
                             initial={{ x: 100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
@@ -35,7 +35,7 @@ const CEO = () => {
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
                             viewport={{ once: true }}>
-                            <img src="/ceo.jpeg" alt="CEO Image" className="rounded-lg mx-auto w-[480px] h-[280px] mt-8" />
+                            <img src="/ceo.jpeg" alt="CEO Image" className="rounded-lg mx-auto w-[300px] h-[190px] sm:w-[480px] sm:h-[280px] md:w-[480px] md:h-[280px] mt-8" />
                         </motion.div>
                     </div>
                 </div>

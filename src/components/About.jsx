@@ -6,7 +6,7 @@ import Testimonials from './Testimonials'
 
 const About = () => {
     return (
-        <section id="about" className="py-5 mt-14">
+        <section id="about" className="py-5 md:px-5 lg:px-8 mt-14">
             <div className="container mx-auto md:px-6">
                 <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
                     <span className="text-orange-400">About</span> Us

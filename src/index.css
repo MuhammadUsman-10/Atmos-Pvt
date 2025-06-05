@@ -1,8 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 400px;
+  --breakpoint-xsm: 575px;
+  --breakpoint-xxl: 1440px;
+}
+
 :root {
   font-family: Roboto, sans-serif;
   background-color: #ffddaa;
+}
+
+.hero-section {
+  background-image: none; /* default: hidden on small screens */
+  height: auto;
+}
+
+/* Show background only on medium and up */
+@media (min-width: 768px) {
+  .hero-section {
+    background-image: url('/atmos.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 720px;
+    width: full;
+  }
 }
 
 /* Fade-in-up animation */
