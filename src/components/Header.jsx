@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
 
     // Smooth scroll handler
     const handleSmoothScroll = (e) => {
@@ -11,6 +11,8 @@ const Header = () => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth' });
+            // Set active section when clicked
+            setActiveSection(targetId.replace('#', ''));
         }
         // Close mobile menu after clicking a link
         setIsMenuOpen(false);
@@ -24,15 +26,37 @@ const Header = () => {
             <a href='#home' onClick={(e) => {
                 e.preventDefault();
                 document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                }}>
+                setActiveSection('home');
+            }}>
                 <img src="logo.png" alt="" className='w-full h-12 object-contain'/>
             </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-                <a href="#home" onClick={handleSmoothScroll} className='text-xl text-gray-600 hover:text-black transition-colors duration-300'>Home</a>
-                <a href="#about" onClick={handleSmoothScroll} className='text-xl text-gray-600 hover:text-black transition-colors duration-300'>About</a>
-                <a href="#services" onClick={handleSmoothScroll} className='text-xl text-gray-600 hover:text-black transition-colors duration-300'>Services</a>
+                <a href="#home" onClick={handleSmoothScroll} 
+                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'home' ? 'text-black' : '' }`}
+                >
+                    Home
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                        activeSection === 'home' ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                </a>
+                <a href="#about" onClick={handleSmoothScroll} 
+                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'about' ? 'text-black' : ''}`}
+                >
+                    About
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                        activeSection === 'about' ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                </a>
+                <a href="#services" onClick={handleSmoothScroll} 
+                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'services' ? 'text-black' : ''}`}
+                >
+                    Services
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                        activeSection === 'services' ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                </a>
             </div>
             <a href="#contact" className='hidden md:flex bg-[#ffaa17] hover:bg-[#febf51] px-6 py-2 rounded-md cursor-pointer transition-colors duration-300'
                 onClick={(e) => {
@@ -82,9 +106,30 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="bg-white flex flex-col space-y-6 p-6 mt-[-15px]">
-                    <a href="#home" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">Home</a>
-                    <a href="#about" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">About</a>
-                    <a href="#services" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">Services</a>
+                    <a href="#home" onClick={handleSmoothScroll} 
+                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'home' ? 'text-black' : ''}`}
+                    >
+                        Home
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                            activeSection === 'home' ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}></span>
+                    </a>
+                    <a href="#about" onClick={handleSmoothScroll} 
+                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'about' ? 'text-black' : ''}`}
+                    >
+                        About
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                            activeSection === 'about' ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}></span>
+                    </a>
+                    <a href="#services" onClick={handleSmoothScroll} 
+                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'services' ? 'text-black' : ''}`}
+                    >
+                        Services
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                            activeSection === 'services' ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}></span>
+                    </a>
                     <a href="#contact" className="bg-[#ffaa17] text-black text-center px-6 py-2 rounded-md transition-colors w-40"onClick={(e) => {
                         e.preventDefault();
                         document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
