@@ -49,7 +49,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className=' hover:text-[#ffaa17] focus:outline-none transition-colors duration-300'
                 >
-                <svg className="h-6 w-6" fill="orange" viewBox="0 0 24 24" stroke="orange">
+                <svg className="h-6 w-6" fill="rgb(255,177,44)" viewBox="0 0 24 24" stroke="rgb(255,177,44)">
                     {isMenuOpen ? (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     ) : (
@@ -75,17 +75,17 @@ const Header = () => {
                             onClick={() => setIsMenuOpen(false)}
                             className=" focus:outline-none"
                         >
-                            <svg className="h-6 w-6" fill="black" viewBox="0 0 24 24" stroke="orange">
+                            <svg className="h-6 w-6" fill="black" viewBox="0 0 24 24" stroke="rgb(255,177,44)">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                <div className="bg-[#e1e2e1] flex flex-col space-y-6 p-6 mt-[-15px]">
-                    <a href="#home" onClick={handleSmoothScroll} className="text-[#ffaa17] text-lg">Home</a>
-                    <a href="#about" onClick={handleSmoothScroll} className="text-[#ffaa17] text-lg">About</a>
-                    <a href="#services" onClick={handleSmoothScroll} className="text-[#ffaa17] text-lg">Services</a>
-                    <a href="#contact" className="bg-[#febf51] text-black text-center px-6 py-2 rounded-md transition-colors w-40"onClick={(e) => {
+                <div className="bg-white flex flex-col space-y-6 p-6 mt-[-15px]">
+                    <a href="#home" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">Home</a>
+                    <a href="#about" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">About</a>
+                    <a href="#services" onClick={handleSmoothScroll} className="text-gray-600 hover:text-[#ffaa17] text-lg">Services</a>
+                    <a href="#contact" className="bg-[#ffaa17] text-black text-center px-6 py-2 rounded-md transition-colors w-40"onClick={(e) => {
                         e.preventDefault();
                         document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                         }}
@@ -98,7 +98,7 @@ const Header = () => {
             {/* Overlay */}
             {isMenuOpen && (
                 <div 
-                    className="fixed inset-0 bg-black bg-opacity-50 z-50 md:hidden"
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
                     onClick={() => setIsMenuOpen(false)}
                 />
             )}
