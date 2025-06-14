@@ -9,7 +9,7 @@ export default function TermsModal() {
         {/* Link to open modal */}
         <button
             onClick={toggleModal}
-            className="text-orange-400 hover:underline"
+            className="text-[#ffaa17] hover:underline"
         >
             Terms & Conditions
         </button>

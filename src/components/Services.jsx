@@ -11,8 +11,8 @@ const Services = () => {
     return (
         <section id="services" className="py-16">
             <div className="container mx-auto md:px-6">
-                <h2 className="text-4xl font-bold text-center uppercase text-black mb-4 relative">
-                    Our <span className="text-orange-400">Services</span>
+                <h2 className="text-4xl font-bold text-center uppercase text-black mb-4">
+                    Our <span className="text-[#ffaa17]">Services</span>
                 </h2>
                 <p className="text-lg text-center text-black my-12">
                     Specialized Outsourcing for the Security Industry
@@ -24,13 +24,13 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black group-hover:text-orange-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.64.08-1.26.22-1.86l5.62 5.62c.17.17.42.27.68.28.28-.01.53-.11.71-.29l5.62-5.62c.14.6.22 1.22.22 1.86 0 4.08-3.05 7.44-7 7.93zM12 4.07c3.95.49 7 3.85 7 7.93 0 .64-.08 1.26-.22 1.86L13.16 8.84c-.18-.18-.43-.28-.7-.28-.28 0-.53.1-.71.29L5.22 13.86c-.14-.6-.22-1.22-.22-1.86 0-4.08 3.05-7.44 7-7.93z"/></svg>
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.64.08-1.26.22-1.86l5.62 5.62c.17.17.42.27.68.28.28-.01.53-.11.71-.29l5.62-5.62c.14.6.22 1.22.22 1.86 0 4.08-3.05 7.44-7 7.93zM12 4.07c3.95.49 7 3.85 7 7.93 0 .64-.08 1.26-.22 1.86L13.16 8.84c-.18-.18-.43-.28-.7-.28-.28 0-.53.1-.71.29L5.22 13.86c-.14-.6-.22-1.22-.22-1.86 0-4.08 3.05-7.44 7-7.93z"/></svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Dispatch Services</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Dispatch Services</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                         24/7 dispatching support with trained personnel who understand security protocols, urgency, and clear communication.
                         </p>
                     </motion.div>
@@ -41,11 +41,11 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                            <svg fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                                width="800px" height="800px" className="h-8 w-8 text-black group-hover:text-orange-400" viewBox="0 0 256 173" enable-background="new 0 0 256 173" xml:space="preserve">
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                            <svg fill="currentColor" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                width="800px" height="800px" viewBox="0 0 256 173" enable-background="new 0 0 256 173" xml:space="preserve">
                             <path d="M128.253,56.864c15.186,0,27.432-12.247,27.432-27.432S143.536,2,128.253,2
                                 c-15.186,0-27.432,12.247-27.432,27.432C100.918,44.716,113.165,56.864,128.253,56.864z M64.571,136.32h-49.28
                                 c-15.969,0-16.851-24.395,0.294-24.395H58.3l24.493-36.054c7.25-9.895,15.48-14.598,27.138-14.598h36.544
@@ -75,8 +75,8 @@ const Services = () => {
                             </g>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Scheduling</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Scheduling</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                             Efficient workforce scheduling, shift coverage, and conflict resolution to keep your operations running smoothly.
                         </p>
                     </motion.div>
@@ -87,10 +87,10 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                        <svg fill="currentColor" height="800px" width="800px" className="h-8 w-8 text-black group-hover:text-orange-400" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                        <svg fill="currentColor" height="800px" width="800px" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 viewBox="0 0 512 512"  xml:space="preserve">
                             <g>
                                 <path class="st0" d="M123.671,288.694c1.743,0.582,3.542,0.877,5.347,0.877h0.002c3.898,0,7.694-1.405,10.685-3.944
@@ -113,8 +113,8 @@ const Services = () => {
                             </g>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Virtual Assistants</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Virtual Assistants</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                             Administrative support tailored for security firms — from report handling to call management.
                         </p>
                     </motion.div>
@@ -125,10 +125,10 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                        <svg fill="currentColor" width="800px" height="800px" className="h-8 w-8 text-black group-hover:text-orange-400" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Layer_3" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                        <svg fill="currentColor" width="800px" height="800px" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Layer_3" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                             <g>
 
@@ -138,8 +138,8 @@ const Services = () => {
 
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Back-Office Support</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Back-Office Support</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                             Data entry, invoicing, reporting, and admin tasks — handled with accuracy and confidentiality.
                         </p>
                     </motion.div>
@@ -150,10 +150,10 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                        <svg fill="currentColor" height="800px" width="800px" className="h-8 w-8 text-black group-hover:text-orange-400" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                        <svg fill="currentColor" height="800px" width="800px" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 viewBox="0 0 32 32" xml:space="preserve">
                             <path d="M23,28L23,28c-1.1,0-2.1-0.7-2.5-1.8c0-0.1,0-0.2-0.1-0.2h-8.9c0,0.1,0,0.2-0.1,0.2C11.1,27.3,10.1,28,9,28h0
                                 c-0.6,0-1,0.4-1,1s0.4,1,1,1h14c0.6,0,1-0.4,1-1S23.6,28,23,28z"/>
@@ -165,8 +165,8 @@ const Services = () => {
                             </g>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Monitoring</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Monitoring</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                             Surveillance assistance and alert management, integrated with your systems for proactive security.
                         </p>
                     </motion.div>
@@ -177,10 +177,10 @@ const Services = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="bg-[#1f1f1f] hover:bg-orange-400 rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
+                        className="bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 flex flex-col items-center text-center group transition ease-in-out"
                     >
-                        <div className="w-16 h-16 bg-orange-400 group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
-                        <svg fill="currentColor" width="800px" height="800px" className="h-8 w-8 text-black group-hover:text-orange-400" viewBox="0 0 512 512" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <div className="w-16 h-16 bg-[#ffaa17] group-hover:bg-black rounded-full mb-4 flex items-center justify-center">
+                        <svg fill="currentColor" width="800px" height="800px" className="h-8 w-8 text-black group-hover:text-[#ffaa17]" viewBox="0 0 512 512" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                             <g id="_x37_20_x2C__development_x2C__human_x2C__network_x2C__personality_x2C__self">
 
@@ -196,8 +196,8 @@ const Services = () => {
 
                             </svg>
                         </div>
-                        <h3 className="text-xl font-semibold text-white group-hover:text-black mb-3">Quality Workforce</h3>
-                        <p className="text-white group-hover:text-black text-sm">
+                        <h3 className="text-xl font-semibold text-gray-600 group-hover:text-black mb-3">Quality Workforce</h3>
+                        <p className="text-gray-600 group-hover:text-black text-sm">
                             Trained and vetted personnel who understand the nuances of the security industry, ensuring high-quality service.
                         </p>
                     </motion.div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CEO = () => {
     return (
-        <div className="py-16">
+        <div className="py-16 sm:py-10">
             <div className="container mx-auto">
                 <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
                     <motion.div 
@@ -13,8 +13,8 @@ const CEO = () => {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl font-semibold text-black mb-10 relative">
-                            <span className="text-orange-400">Our Founder</span> & CEO
+                        <h2 className="text-2xl font-semibold text-black mb-10">
+                            <span className="text-[#ffaa17]">Our Founder</span> & CEO
                         </h2>
                         <p className="text-base text-black mb-4">
                             Haseeb&apos;s hard work and dedication to accuracy are truly commendable. His ability to provide precise, 
@@ -25,7 +25,7 @@ const CEO = () => {
                     </motion.div>
                     <div className='w-full lg:w-1/2 relative'>
                         <motion.div 
-                            className="absolute -z-10 rounded-lg top-[20px] max-[425px]:right-[-10px] xs:right-[25px] xsm:right-[95px] sm:right-[45px] md:right-[85px] lg:right-[-15px] xl:right-[30px] xxl:right-[30px] 2xl:right-[90px] w-[200px] h-[200px] sm:w-[280px] sm:h-[260px] bg-orange-400"
+                            className="absolute -z-10 rounded-lg top-[20px] max-[425px]:right-[-10px] xs:right-[25px] xsm:right-[95px] sm:right-[45px] md:right-[85px] lg:right-[-15px] xl:right-[30px] xxl:right-[30px] 2xl:right-[90px] w-[200px] h-[200px] sm:w-[280px] sm:h-[260px] bg-[#ffaa17]"
                             initial={{ x: 100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
