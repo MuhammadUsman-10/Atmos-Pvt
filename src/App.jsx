@@ -72,8 +72,8 @@ function App() {
       <Contact />
 
       {/* Footer */}
-      <Footer />
     </div>
+    <Footer />
     </>
   )
 }
