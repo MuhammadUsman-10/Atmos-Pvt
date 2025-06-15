@@ -19,13 +19,13 @@ const Contact = () => {
         )
         .then(
             (result) => {
-                console.log(result.text);
+                console.log("Email Sent Successfully:", result.text);
                 setResponseMsg('Message sent successfully!');
                 setIsSending(false);
                 form.current.reset();
             },
             (error) => {
-                console.log(error.text);
+                console.log("Error Sending Email", error.text);
                 setResponseMsg('Something went wrong. Please try again later.');
                 setIsSending(false);
             }
