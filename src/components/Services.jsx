@@ -9,7 +9,7 @@ const Services = () => {
     };
 
     return (
-        <section id="services" className="py-16">
+        <section id="services" className="bg-[#E1E2E1] py-16">
             <div className="container mx-auto md:px-6">
                 <h2 className="text-4xl font-bold text-center uppercase text-black mb-4">
                     Our <span className="text-[#ffaa17]">Services</span>

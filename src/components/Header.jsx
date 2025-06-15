@@ -71,13 +71,13 @@ const Header = () => {
                     }`}></span>
                 </a>
             </div>
-            <a href="#contact" className='hidden md:flex bg-[#ffaa17] hover:bg-[#febf51] px-6 py-2 rounded-md cursor-pointer transition-colors duration-300'
+            <a href="#contact" className='hidden md:flex btn-slide-bg text-lg text-black hover:text-[#ffaa17] bg-[#ffaa17] border border-transparent hover:border-[#ffaa17] px-6 py-2 rounded-md cursor-pointer transition delay-150'
                 onClick={(e) => {
                 e.preventDefault();
                 document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                 }}
             >
-                Contact Us
+                <span className='relative'>Contact Us</span>
             </a>
 
             {/* Mobile Menu Button */}
