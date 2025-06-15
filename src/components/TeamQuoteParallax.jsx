@@ -16,7 +16,7 @@ const TeamQuoteParallax = () => {
             // Calculate distance scrolled past the element
             const distance = scrollTop - elementTop;
             // Base offset to start the parallax effect
-            const baseOffset = 40; // Adjust this value to control the initial offset
+            const baseOffset = 60; // Adjust this value to control the initial offset
 
             setOffset(distance * speed + baseOffset);
         };
