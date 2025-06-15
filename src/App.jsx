@@ -7,6 +7,8 @@ import Services from './components/Services'
 import About from './components/About'
 import Hero from './components/Hero'
 import TeamQuoteParallax from './components/TeamQuoteParallax'
+import StatsParallax from './components/StatsParallax'
+import ParallaxStatsSection from './components/haha'
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -69,6 +71,8 @@ function App() {
 
       {/* Parallax Team Quote Section */}
       <TeamQuoteParallax />
+      <StatsParallax />
+      <ParallaxStatsSection />
 
       {/* Services Section */}
       <Services />
