@@ -15,8 +15,10 @@ const TeamQuoteParallax = () => {
 
             // Calculate distance scrolled past the element
             const distance = scrollTop - elementTop;
+            // Base offset to start the parallax effect
+            const baseOffset = 40; // Adjust this value to control the initial offset
 
-            setOffset(distance * speed);
+            setOffset(distance * speed + baseOffset);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -27,7 +29,7 @@ const TeamQuoteParallax = () => {
     return (
         <section
             ref={parallaxRef}
-            className="relative w-full h-[420px] md:h-[450px] lg:h-[500px] flex items-center justify-center overflow-hidden"
+            className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[650px] flex items-center justify-center overflow-hidden"
             style={{
                 // Parallax effect: move background image up as you scroll
                 backgroundImage: `url('/bg-image-2.png')`,
@@ -44,7 +46,7 @@ const TeamQuoteParallax = () => {
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
             {/* Icon in yellow circle */}
-            <div className="flex items-center justify-center mb-20">
+            <div className="flex items-center justify-center mb-4 md:mb-8 lg:mb-20">
                 <div className="bg-[#ffaa17] rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
                     {/* SVG icon similar to reference */}
                     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
