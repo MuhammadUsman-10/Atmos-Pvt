@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
     const form = useRef();
     const [isSending, setIsSending] = useState(false);
-    const [responseMsg, setResponseMsg] = useState('');
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -20,13 +19,13 @@ const Contact = () => {
         .then(
             (result) => {
                 console.log("Email Sent Successfully:", result.text);
-                setResponseMsg('Message sent successfully!');
+                alert('Message sent successfully!');
                 setIsSending(false);
                 form.current.reset();
             },
             (error) => {
                 console.log("Error Sending Email", error.text);
-                setResponseMsg('Something went wrong. Please try again later.');
+                alert('Something went wrong. Please try again later.');
                 setIsSending(false);
             }
         );
@@ -71,7 +70,6 @@ const Contact = () => {
                     >
                         <span className='relative'>{isSending ? 'Sending...' : 'Send Message'}</span>
                     </button>
-                    {responseMsg && <p className="text-black text-sm mt-3">{responseMsg}</p>}
                 </form>
             </motion.div>
 
