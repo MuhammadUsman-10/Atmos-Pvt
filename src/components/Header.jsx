@@ -120,7 +120,7 @@ const Header = () => {
                 </div>
                 <div className="bg-white flex flex-col space-y-6 p-6 mt-[-15px]">
                     <a href="#home" onClick={handleSmoothScroll} 
-                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'home' ? 'text-black' : ''}`}
+                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'home' ? 'text-black' : ''}`}
                     >
                         Home
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -128,7 +128,7 @@ const Header = () => {
                         }`}></span>
                     </a>
                     <a href="#about" onClick={handleSmoothScroll} 
-                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'about' ? 'text-black' : ''}`}
+                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'about' ? 'text-black' : ''}`}
                     >
                         About
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -136,19 +136,20 @@ const Header = () => {
                         }`}></span>
                     </a>
                     <a href="#services" onClick={handleSmoothScroll} 
-                        className={`text-[#ffaa17] text-lg relative group ${activeSection === 'services' ? 'text-black' : ''}`}
+                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'services' ? 'text-black' : ''}`}
                     >
                         Services
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
                             activeSection === 'services' ? 'w-full' : 'w-0 group-hover:w-full'
                         }`}></span>
                     </a>
-                    <a href="#contact" className="bg-[#ffaa17] text-black text-center px-6 py-2 rounded-md transition-colors w-40"onClick={(e) => {
-                        e.preventDefault();
-                        document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                    <a href="#contact" className="btn-slide-bg text-lg text-black hover:text-[#ffaa17] bg-[#ffaa17] border border-transparent hover:border-[#ffaa17] text-center px-6 py-2 rounded-md cursor-pointer transition delay-150"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.querySelector(e.currentTarget.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                         }}
                     >
-                        Contact Us
+                        <span className='relative'>Contact Us</span>
                     </a>
                 </div>
             </div>

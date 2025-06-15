@@ -16,7 +16,7 @@ export default function TermsModal() {
 
         {/* Modal Overlay */}
         {isOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black opacity-100">
+            <div className="fixed inset-0 z-150 flex items-center justify-center bg-black opacity-100">
                 <div className="bg-white max-h-[90vh] w-full max-w-4xl rounded-lg shadow-xl overflow-y-auto p-6 relative">
                     {/* Close Button */}
                     <button
