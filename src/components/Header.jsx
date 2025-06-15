@@ -47,7 +47,7 @@ const Header = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-10 uppercase">
                 <a href="#home" onClick={handleSmoothScroll} 
-                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'home' ? 'text-black' : '' }`}
+                    className={`text-xl hover:text-black transition-colors duration-300 relative group ${activeSection === 'home' ? 'text-black' : 'text-gray-600' }`}
                 >
                     Home
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -55,7 +55,7 @@ const Header = () => {
                     }`}></span>
                 </a>
                 <a href="#about" onClick={handleSmoothScroll} 
-                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'about' ? 'text-black' : ''}`}
+                    className={`text-xl hover:text-black transition-colors duration-300 relative group ${activeSection === 'about' ? 'text-black' : 'text-gray-600'}`}
                 >
                     About
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -63,7 +63,7 @@ const Header = () => {
                     }`}></span>
                 </a>
                 <a href="#services" onClick={handleSmoothScroll} 
-                    className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'services' ? 'text-black' : ''}`}
+                    className={`text-xl hover:text-black transition-colors duration-300 relative group ${activeSection === 'services' ? 'text-black' : 'text-gray-600'}`}
                 >
                     Services
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -120,7 +120,7 @@ const Header = () => {
                 </div>
                 <div className="bg-white flex flex-col space-y-6 p-6 mt-[-15px]">
                     <a href="#home" onClick={handleSmoothScroll} 
-                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'home' ? 'text-black' : ''}`}
+                        className={`hover:text-black text-xl relative group ${activeSection === 'home' ? 'text-black' : 'text-gray-600'}`}
                     >
                         Home
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -128,7 +128,7 @@ const Header = () => {
                         }`}></span>
                     </a>
                     <a href="#about" onClick={handleSmoothScroll} 
-                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'about' ? 'text-black' : ''}`}
+                        className={`hover:text-black text-xl relative group ${activeSection === 'about' ? 'text-black' : 'text-gray-600'}`}
                     >
                         About
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
@@ -136,7 +136,7 @@ const Header = () => {
                         }`}></span>
                     </a>
                     <a href="#services" onClick={handleSmoothScroll} 
-                        className={`text-gray-600 hover:text-black text-xl relative group ${activeSection === 'services' ? 'text-black' : ''}`}
+                        className={`hover:text-black text-xl relative group ${activeSection === 'services' ? 'text-black' : 'text-gray-600'}`}
                     >
                         Services
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
