@@ -7,7 +7,7 @@ const CEO = () => {
             <div className="container mx-auto">
                 <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
                     <motion.div 
-                        className='w-full lg:w-1/2 mt-4 p-5 lg:px-10'
+                        className='w-full lg:w-1/2 mt-4 lg:p-5 lg:px-10'
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}

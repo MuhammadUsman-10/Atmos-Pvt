@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-    <div className="max-w-[1536px] container mx-auto px-6 md:px-0 overflow-hidden">
+    <div className="max-w-[1536px] px-6 md:px-0 overflow-hidden">
       <Header />
       {/* Scroll to Top Button */}
       <AnimatePresence>

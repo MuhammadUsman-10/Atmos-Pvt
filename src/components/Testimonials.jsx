@@ -7,7 +7,7 @@ const Testimonials = () => {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Testimonial Card 1 */}
-                    <motion.div className="group bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-16 cursor-default transition duration-200 ease-in-out"
+                    <motion.div className="group bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 lg:p-16 cursor-default transition duration-200 ease-in-out"
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -28,7 +28,7 @@ const Testimonials = () => {
                     </motion.div>
 
                     {/* Testimonial Card 2 - Placeholder */}
-                    <motion.div className="group bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-16 cursor-default transition duration-200 ease-in-out"
+                    <motion.div className="group bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 lg:p-16 cursor-default transition duration-200 ease-in-out"
                         initial={{ x: 100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut'}}

@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+    const [isAtTop, setIsAtTop] = useState(true);
+
+    // Add scroll event listener
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsAtTop(window.scrollY < 50); // You can adjust this value
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Smooth scroll handler
     const handleSmoothScroll = (e) => {
@@ -19,7 +30,9 @@ const Header = () => {
     };
 
     return (
-        <header className='z-1 fixed w-full bg-white shadow-xl transition-all duration-300 ease-in-out ml-[-25px] md:ml-0'>
+        <header className={`z-100 fixed w-full h-20 bg-white transition-all duration-300 ease-in-out ml-[-25px] md:ml-0 ${
+            isAtTop ? '' : 'shadow-xl'
+        }`}>
         <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
             {/* Logo */}
@@ -32,7 +45,7 @@ const Header = () => {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-10 uppercase">
                 <a href="#home" onClick={handleSmoothScroll} 
                     className={`text-xl text-gray-600 hover:text-black transition-colors duration-300 relative group ${activeSection === 'home' ? 'text-black' : '' }`}
                 >
