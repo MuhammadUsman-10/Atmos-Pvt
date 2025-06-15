@@ -25,7 +25,7 @@ const CEO = () => {
                     </motion.div>
                     <div className='w-full lg:w-1/2 relative'>
                         <motion.div 
-                            className="absolute rounded-lg top-[20px] max-[425px]:right-[-10px] xs:right-[15px] xsm:right-[95px] sm:right-[45px] md:right-[85px] lg:right-[5px] xl:right-[30px] xxl:right-[30px] 2xl:right-[90px] w-[200px] h-[200px] sm:w-[280px] sm:h-[260px] bg-[#ffaa17]"
+                            className="absolute rounded-lg top-[20px] max-[425px]:right-[-10px] xs:right-[15px] xsm:right-[95px] sm:right-[45px] md:right-[85px] lg:right-[25px] xl:right-[40px] xxl:right-[30px] 2xl:right-[105px] w-[200px] h-[200px] sm:w-[280px] sm:h-[260px] bg-[#ffaa17]"
                             initial={{ x: 100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
@@ -35,7 +35,7 @@ const CEO = () => {
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
                             viewport={{ once: true }}>
-                            <img src="/ceo.jpeg" alt="CEO Image" className="relative rounded-lg mx-auto w-[300px] h-[190px] sm:w-[480px] sm:h-[280px] md:w-[480px] md:h-[280px] lg:w-[430px] xl:w-[480px] mt-8" />
+                            <img src="/ceo.jpeg" alt="CEO Image" className="relative rounded-lg mx-auto w-[300px] h-[190px] sm:w-[480px] sm:h-[280px] md:w-[480px] md:h-[280px] lg:w-[400px] xl:w-[480px] mt-8" />
                         </motion.div>
                     </div>
                 </div>

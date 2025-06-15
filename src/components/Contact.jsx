@@ -34,16 +34,13 @@ const Contact = () => {
 
     return (
         <section id='contact' className="py-16 bg-[#222429]">
-        <div className="container mx-auto md:px-6">
-            {/* <h2 className="text-4xl text-black font-bold text-center uppercase mb-12">
-            Keep in <span className="text-[#ffaa17]">Touch!</span>
-            </h2> */}
+        <div className="container mx-auto px-6 lg:px-16 xl:px-18">
             <div className="flex flex-col md:flex-row-reverse md:space-x-12">
             {/* Contact Form */}
             <motion.div 
-                className='md:w-1/2'
+                className='md:w-1/2 md:px-4'
                 initial={{ x: 100, opacity: 0 }}
-                whileInView={{ x:30, opacity: 1 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 viewport={{ once: true }}
             >
@@ -81,17 +78,17 @@ const Contact = () => {
             {/* Contact Info */}
             <motion.div 
                 className='md:w-1/2 mt-12 md:mt-0 relative z-0'
-                initial={{ x: 0, opacity: 0 }}
-                whileInView={{ x: 70, opacity: 1 }}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
                 viewport={{ once: true }}
             >
                 <div className='z-0'>
                 <motion.div className='-z-0'>
-                    <span className="absolute top-[40px] left-[25%] -z-0 rounded-full w-[150px] h-[150px] bg-[#ffaa17] blur-[100px]"></span>
+                    <span className="absolute top-[60px] left-[25%] -z-0 rounded-full w-[150px] h-[150px] bg-[#ffaa17] blur-[100px]"></span>
                 </motion.div>
-                    <h3 className="text-5xl font-bold text-white mb-6">Let’s Take the Next <br />Step — Together <span className="text-[#ffaa17]">!</span></h3>
-                    <p className="text-xl lg:text-2xl text-gray-300 mb-10 lg:w-[460px]">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">Let’s Take the Next <br />Step — Together <span className="text-[#ffaa17]">!</span></h3>
+                    <p className="text-xl lg:text-xl text-gray-300 mb-10 lg:w-[390px]">
                         You’ve explored what ATMOS is all about — now let’s bring it to life.
                         If you're thinking, “This could work for us” — you're probably right.
                         Fill the form and we'll reach out soon.

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Testimonials = () => {
     return (
         <section id="testimonials" className="bg-[#e1e2e1] pb-16 ">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 lg:px-16 xl:px-18">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Testimonial Card 1 */}
                     <motion.div className="group bg-white hover:bg-[#ffaa17] rounded-lg shadow-md p-6 lg:p-16 cursor-default transition duration-200 ease-in-out"
