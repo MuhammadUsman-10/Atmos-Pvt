@@ -17,7 +17,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="home" className='mt-20 lg:px-2 relative overflow-hidden'>
+        <div className=''>
+        <section id="home" className='mt-20 relative overflow-hidden'>
             {/* Background Image Slider */}
             <div className="absolute inset-0 w-full h-full">
                 <AnimatePresence mode="wait">
@@ -59,7 +60,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black opacity-60"></div>
 
             {/* Content */}
-            <div className="max-w-[1440px] container mx-auto md:px-6 pt-20 my-auto relative z-10">
+            <div className="max-w-[1440px] container mx-auto px-6 pt-20 my-auto relative z-10">
                 <AnimatePresence mode="wait">
                     <motion.div 
                         key={currentImage}
@@ -109,6 +110,7 @@ const Hero = () => {
                 </AnimatePresence>
             </div>
         </section>
+        </div>
     );
 };
 

@@ -30,7 +30,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`z-100 fixed w-full h-20 bg-white transition-all duration-300 ease-in-out ml-[-25px] md:ml-0 ${
+        <header className={`z-100 fixed w-full h-20 bg-white transition-all duration-300 ease-in-out ${
             isAtTop ? '' : 'shadow-xl'
         }`}>
         <nav className="container mx-auto px-6 py-4">

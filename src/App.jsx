@@ -35,8 +35,9 @@ function App() {
 
   return (
     <>
-    <div className="max-w-[1536px] px-6 md:px-0 overflow-hidden">
-      <Header />
+    <Header />
+    
+    <div className="max-w-[1536px] container mx-auto overflow-hidden">
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
@@ -70,9 +71,9 @@ function App() {
 
       {/* Contact Section */}
       <Contact />
-
-      {/* Footer */}
     </div>
+
+    {/* Footer */}
     <Footer />
     </>
   )
