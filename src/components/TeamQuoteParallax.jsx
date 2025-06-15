@@ -112,11 +112,7 @@ const TeamQuoteParallax = () => {
             {/* Icon in yellow circle */}
             <div className="mb-6 md:mb-12 lg:mb-20">
             <div className="bg-[#ffaa17] w-20 h-20 rounded-full flex items-center justify-center shadow-lg">
-                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="7" y="7" width="24" height="24" rx="3" stroke="#111" strokeWidth="2.5" />
-                <rect x="13" y="13" width="12" height="12" rx="1.5" stroke="#111" strokeWidth="2" />
-                <rect x="17" y="17" width="4" height="4" rx="1" fill="#111" />
-                </svg>
+                <img src='/team-2.png' alt='Team Icon' className='w-12 h-12' />
             </div>
             </div>
 
