@@ -8,6 +8,8 @@ import About from './components/About'
 import Hero from './components/Hero'
 import TeamQuoteParallax from './components/TeamQuoteParallax'
 import StatsParallax from './components/StatsParallax'
+import WhyChooseUs from './components/WhyChooseUs'
+import TestimonialCarousel from './components/TestimonialCarousel'
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -76,6 +78,9 @@ function App() {
 
       {/* Stats Section */}
       <StatsParallax />
+
+      {/* Testimonials Carousel */}
+      <TestimonialCarousel />
 
       {/* Contact Section */}
       <Contact />

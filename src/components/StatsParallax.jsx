@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import '../index.css';
 
 const stats = [
   { value: '8705', label: 'Projects Completed' },
@@ -51,10 +52,10 @@ const StatsParallax = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[700px] flex flex-col justify-center items-center overflow-hidden py-12 md:py-20"
+      className="relative bg-image -z-10 w-full flex flex-col justify-center items-center overflow-hidden py-12 md:py-20"
     >
       {/* Parallax Background */}
-      <div
+      {/* <div
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage: "url('/bg-image-1.png')",
@@ -63,12 +64,12 @@ const StatsParallax = () => {
           backgroundPosition: `center ${-offset}px`,
           transition: 'background-position 0.1s linear',
         }}
-      />
+      /> */}
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-80 -z-0" />
+      <div className="absolute inset-0 bg-black/80 opacity-70 -z-0" />
 
       {/* Stats Row */}
-      <div className="w-full max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 py-8 px-4 md:px-0 z-10">
+      <div className="relative w-full max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 py-8 px-4 md:px-0 mb-8 z-10">
         {stats.map((stat, i) => (
           <div key={stat.label} className="flex flex-col items-center justify-center">
             <span className="text-white text-4xl md:text-5xl font-bold">{stat.value}</span>
@@ -93,7 +94,7 @@ const StatsParallax = () => {
           <div className="flex flex-col gap-8 mt-4">
             {features.map((feature) => (
               <div key={feature.number} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#fff3d6] flex items-center justify-center text-[#ffaa17] font-bold text-lg border border-[#ffaa17]">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffaa17] flex items-center justify-center text-black font-bold text-lg border border-[#ffaa17]">
                   {feature.number}
                 </div>
                 <div>
@@ -111,7 +112,7 @@ const StatsParallax = () => {
               WE'RE TRUSTED BY MORE<br />
               THAN <span className="text-[#ffaa17]">6260 CLIENTS</span>.
             </h2>
-            <p className="text-[#ffaa17] text-xs md:text-sm mb-2">
+            <p className="text-[#ffaa17] text-xs md:text-sm lg:w-[75%] mb-2">
               There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, simply free text by injected humour, or randomised.
             </p>
           </div>
@@ -128,11 +129,6 @@ const StatsParallax = () => {
                 </div>
               ))}
             </div>
-            <img
-              src="/about-image-1.png"
-              alt="Team working"
-              className="w-full max-w-[140px] md:max-w-[120px] rounded-md object-cover border-2 border-[#ffaa17] shadow-lg mt-4 md:mt-0"
-            />
           </div>
         </div>
       </div>

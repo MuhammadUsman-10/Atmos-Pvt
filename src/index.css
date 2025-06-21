@@ -1,15 +1,29 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 @theme {
+  --breakpoint-xxs: 375px;
   --breakpoint-xs: 400px;
   --breakpoint-xsm: 575px;
   --breakpoint-xxl: 90rem;
 }
 
 :root {
-  font-family: Teko, sans-serif;
+  font-family: "Oswald", sans-serif;
   /* background-color: #E1E2E1; */
   background-color: #ffffff;
+}
+
+.font-anton {
+  font-family: 'Anton', sans-serif;
+}
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+} 
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Sliding background animation for button */
@@ -31,18 +45,23 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 6)); /* Width of 6 cards */
+    transform: translateX(calc(-300px * 18)); /* Width of 6 cards */
   }
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .animate-scroll:hover {
   animation-play-state: paused;
 }
 
+.bg-image {
+  background: url('/public/bg-image-1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .btn-slide-bg::before {
   content: "";

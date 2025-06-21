@@ -13,7 +13,6 @@ const About = () => {
                 </h2> */}
                 <WhoWeAre />
                 <CEO />
-                <Testimonials />
                 <WhyChooseUs />
             </div>
         </section>

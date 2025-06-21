@@ -47,26 +47,32 @@ const Contact = () => {
                     {/* <div className='flex flex-col md:flex-row gap-3'> */}
                     <div className='flex gap-5'>
                         <div className='w-full'>
-                            <label htmlFor="name" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Name</label>
-                            <input type="text" id="name" name="name" className="mt-1 block w-full px-3 py-4 border-[0.5px] border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] bg-transparent text-gray-300" required />
+                            {/* <label htmlFor="name" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Name</label> */}
+                            <input placeholder='Your Name' type="text" id="name" name="name" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
                         </div>
                         <div className='w-full'>
-                            <label htmlFor="email" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Email</label>
-                            <input type="email" id="email" name="email" className="mt-1 block w-full px-3 py-4 border-[0.5px] border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] bg-transparent text-gray-300" required />
+                            {/* <label htmlFor="email" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Email</label> */}
+                            <input placeholder='Email Address' type="email" id="email" name="email" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
                         </div>
                     </div>
-                    <div className=''>
-                        <label htmlFor="subject" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Subject</label>
-                        <input type="text" id="subject" name="subject" className="mt-1 block w-full px-3 py-4 border-[0.5px] border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] bg-transparent text-gray-300" required />
+                    <div className='flex gap-5'>
+                        <div className='w-full'>
+                            {/* <label htmlFor="phone" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">PHone Number</label> */}
+                            <input placeholder='Phone Number' type="tel" id="phone" name="phone" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
+                        </div>
+                        <div className='w-full'>
+                            {/* <label htmlFor="subject" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Subject</label> */}
+                            <input placeholder='Subject'  type="text" id="subject" name="subject" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
+                        </div>
                     </div>
                     <div>
-                        <label htmlFor="message" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Message</label>
-                        <textarea id="message" name="message" rows="4" className="mt-1 block w-full px-3 py-4 border-[0.5px] border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] bg-transparent text-gray-300" required></textarea>
+                        {/* <label htmlFor="message" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Message</label> */}
+                        <textarea placeholder='Your Message' id="message" name="message" rows="4" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required></textarea>
                     </div>
                     <button
                         type="submit"
                         disabled={isSending}
-                        className="w-44 btn-slide-bg justify-center py-5 px-8 border-[0.5px] border-transparent hover:border-[#ffaa17] cursor-pointer text-black hover:text-[#ffaa17] shadow-sm text-sm uppercase font-medium rounded-sm bg-[#ffaa17] transition-colors delay-100 relative"
+                        className="w-60 btn-slide-bg justify-center py-5 px-8 border-[0.5px] border-transparent hover:border-[#ffaa17] cursor-pointer text-black hover:text-[#ffaa17] shadow-sm text-sm uppercase font-medium rounded-sm bg-[#ffaa17] transition-colors delay-100 relative"
                     >
                         <span className='relative'>{isSending ? 'Sending...' : 'Send Message'}</span>
                     </button>

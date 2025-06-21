@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const WhoWeAre = () => {
     return (
-        <div className='bg-white h-[1150px] xs:h-[980px] xsm:h-[900px] sm:h-auto lg:h-[600px]'>
+        <div className='bg-white h-[1190px] xxs:h-[1150px] xs:h-[980px] xsm:h-[900px] sm:h-auto lg:h-[600px]'>
         <div className="pb-60 sm:pb-0 py-10 sm:py-10 lg:mb-16">
             <div className="container mx-auto px-6">
                 <motion.div className='flex flex-col-reverse lg:flex-row justify-between gap-8 md:gap-8'>
@@ -41,7 +41,7 @@ const WhoWeAre = () => {
                         <h2 className="text-2xl md:text-4xl font-semibold text-black mb-10">
                             Who We Are
                         </h2>
-                        <p className="lg:w-[75%] text-base md:text-xl text-black mb-4">
+                        <p className="xl:w-[85%] text-base md:text-xl text-black mb-4">
                             <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> was founded by Haseeb Ahmad, a seasoned operations professional who’s worked hands-on with U.S.-based security firms—tackling everything from dispatch gaps and scheduling bottlenecks to overnight coverage and admin overload. Seeing these challenges firsthand, he launched ATMOS to deliver precision-driven, cost-effective support that plugs right into your existing operations.
                         </p>
                         <div className='flex flex-col xs:flex-row justify-between gap-10 lg:gap-20 relative items-center'>

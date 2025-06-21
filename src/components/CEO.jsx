@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Testimonials from './Testimonials';
 
 const CEO = () => {
     return (
-        <div className="bg-[#e1e2e1] py-16 sm:py-10">
+        <div className="bg-[#e1e2e1] sm:py-10 py-16 mt-16">
             <div className="container mx-auto px-6">
                 <div className='flex flex-col lg:flex-row justify-between gap-8 md:gap-4'>
                     <motion.div 
@@ -40,6 +41,7 @@ const CEO = () => {
                     </div>
                 </div>
             </div>
+            <Testimonials />
         </div>
     )
 }

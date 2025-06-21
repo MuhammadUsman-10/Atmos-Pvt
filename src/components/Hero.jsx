@@ -63,7 +63,7 @@ const Hero = () => {
             <div className="max-w-[1440px] container mx-auto px-6 pt-20 my-auto relative z-10">
                 <AnimatePresence mode="wait">
                     <motion.div 
-                        key={currentImage}
+                        // key={currentImage}
                         className="w-full flex flex-col items-center justify-center my-20 lg:my-48 text-center text-white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -71,13 +71,22 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                     >
                         {/* Heading */}
+                        <motion.h3 
+                            className="w-full lg:w-[40%] text-lg md:text-xl lg:text-xl xl:text-xl xxl:text-xl font-semibold tracking-wider text-white font-montserrat"
+                            initial={{ opacity: 0, y: 70 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+                        >
+                            Welcome To ATMOS
+                        </motion.h3>
+                        {/* Heading */}
                         <motion.h2 
-                            className="w-full lg:w-[40%] text-xl md:text-2xl lg:text-3xl xl:text-5xl xxl:text-4xl font-semibold tracking-wider text-[#ffaa17]"
+                            className="w-full py-4 lg:w-[40%] text-xl md:text-2xl lg:text-3xl xl:text-7xl xxl:text-5xl font-semibold tracking-wider text-[#ffaa17] font-anton"
                             initial={{ opacity: 0, y: 70 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
                         >
-                            Outsourcing Made Easy
+                            Outsourcing <span className='text-white'>Made Easy</span>
                         </motion.h2>
 
                         {/* Paragraph */}
