@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyChooseUs = () => {
   return (
-    <div className="py-10 bg-[#222429]">
+    <div id="whychooseus" className="py-10 bg-[#222429]">
       <div className='container mx-auto px-6 lg:px-16 xl:px-18'>
         <h2 className="text-4xl font-bold text-center uppercase text-white mb-4">
           Why <span className="text-[#ffaa17]">Choose</span> Us

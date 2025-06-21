@@ -41,7 +41,7 @@ function App() {
     <>
     <Header />
     
-    <div className="max-w-[1536px] container mx-auto overflow-hidden">
+    <div className=" mx-auto overflow-hidden">
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (

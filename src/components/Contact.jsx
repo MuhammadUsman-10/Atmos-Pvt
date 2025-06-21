@@ -92,7 +92,7 @@ const Contact = () => {
                     <span className="absolute top-[60px] left-[25%] -z-0 rounded-full w-[150px] h-[150px] bg-[#ffaa17] blur-[100px]"></span>
                 </motion.div>
                     <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">Let’s Take the Next <br />Step — Together <span className="text-[#ffaa17]">!</span></h3>
-                    <p className="text-xl lg:text-xl text-gray-300 mb-10 lg:w-[390px]">
+                    <p className="text-xl lg:text-xl text-gray-300 mb-10 lg:w-[450px]">
                         You’ve explored what ATMOS is all about — now let’s bring it to life.
                         If you're thinking, “This could work for us” — you're probably right.
                         Fill the form and we'll reach out soon.

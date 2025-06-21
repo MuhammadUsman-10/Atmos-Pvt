@@ -13,7 +13,9 @@ const About = () => {
                 </h2> */}
                 <WhoWeAre />
                 <CEO />
-                <WhyChooseUs />
+                <div className='bg-main'>
+                    <WhyChooseUs />
+                </div>
             </div>
         </section>
     )

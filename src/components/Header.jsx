@@ -62,6 +62,14 @@ const Header = () => {
                         activeSection === 'about' ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}></span>
                 </a>
+                <a href="#whychooseus" onClick={handleSmoothScroll} 
+                    className={`text-xl hover:text-black transition-colors duration-300 relative group ${activeSection === 'whychooseus' ? 'text-black' : 'text-gray-600'}`}
+                >
+                    Why Choose Us
+                    <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                        activeSection === 'whychooseus' ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
+                </a>
                 <a href="#services" onClick={handleSmoothScroll} 
                     className={`text-xl hover:text-black transition-colors duration-300 relative group ${activeSection === 'services' ? 'text-black' : 'text-gray-600'}`}
                 >
@@ -133,6 +141,14 @@ const Header = () => {
                         About
                         <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
                             activeSection === 'about' ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}></span>
+                    </a>
+                    <a href="#whychooseus" onClick={handleSmoothScroll} 
+                        className={`hover:text-black text-xl relative group ${activeSection === 'whychooseus' ? 'text-black' : 'text-gray-600'}`}
+                    >
+                        Why Choose Us
+                        <span className={`absolute bottom-0 left-0 h-0.5 bg-[#ffaa17] transition-all duration-300 ${
+                            activeSection === 'whychooseus' ? 'w-full' : 'w-0 group-hover:w-full'
                         }`}></span>
                     </a>
                     <a href="#services" onClick={handleSmoothScroll} 

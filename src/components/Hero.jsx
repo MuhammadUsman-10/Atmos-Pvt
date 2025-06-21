@@ -81,12 +81,12 @@ const Hero = () => {
                         </motion.h3>
                         {/* Heading */}
                         <motion.h2 
-                            className="w-full py-4 lg:w-[40%] text-xl md:text-2xl lg:text-3xl xl:text-7xl xxl:text-5xl font-semibold tracking-wider text-[#ffaa17] font-anton"
+                            className="w-full py-4 lg:w-[40%] text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-wider text-[#ffaa17] font-anton"
                             initial={{ opacity: 0, y: 70 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
                         >
-                            Outsourcing <span className='text-white'>Made Easy</span>
+                            Outsourcing <br /><span className='text-white'>Made Easy</span>
                         </motion.h2>
 
                         {/* Paragraph */}

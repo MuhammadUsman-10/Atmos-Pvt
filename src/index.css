@@ -8,12 +8,17 @@
   --breakpoint-xs: 400px;
   --breakpoint-xsm: 575px;
   --breakpoint-xxl: 90rem;
+  --breakpoint-3xl: 125rem;
 }
 
 :root {
   font-family: "Oswald", sans-serif;
   /* background-color: #E1E2E1; */
   background-color: #ffffff;
+}
+
+.bg-main {
+  background-color: #222429;
 }
 
 .font-anton {

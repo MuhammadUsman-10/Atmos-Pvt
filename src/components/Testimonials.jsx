@@ -15,7 +15,7 @@ const Testimonials = () => {
                         <div className="flex items-center mb-8">
                             <div className="rounded-full flex items-center justify-center mr-4">
                                 {/* Placeholder Icon/Avatar */}
-                                <img src="/robin.jpeg" className="w-12 h-12 rounded-full object-cover" />
+                                <img src="/robin.png" className="w-12 h-12 rounded-full object-cover" />
                             </div>
                             <div>
                                 <h3 className="text-gray-500 group-hover:text-black text-xl font-semibold ">Robin Singh</h3>
@@ -35,7 +35,7 @@ const Testimonials = () => {
                         viewport={{ once: true }}>
                         <div className="flex items-center mb-8">
                             <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                            <img src="/jasmine.jpeg" className="w-12 h-12 rounded-full object-contain" />
+                            <img src="/jasmine.png" className="w-12 h-12 rounded-full object-contain" />
                             </div>
                             <div>
                                 <h3 className="text-gray-500 group-hover:text-black text-xl font-semibold">Jasmine Malik</h3>
