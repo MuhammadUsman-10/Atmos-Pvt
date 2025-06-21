@@ -8,14 +8,9 @@ const About = () => {
     return (
         <section id="about" className="mt-14">
             <div className="">
-                {/* <h2 className="text-4xl font-bold text-center uppercase text-black mb-4">
-                    <span className="text-[#ffaa17]">About</span> Us
-                </h2> */}
                 <WhoWeAre />
                 <CEO />
-                <div className='bg-main'>
-                    <WhyChooseUs />
-                </div>
+                <WhyChooseUs />
             </div>
         </section>
     )
