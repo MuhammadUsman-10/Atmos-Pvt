@@ -34,10 +34,10 @@ const Contact = () => {
     return (
         <section id='contact' className="py-16 bg-[#222429]">
         <div className="container mx-auto px-6 lg:px-16 xl:px-18">
-            <div className="flex flex-col md:flex-row-reverse md:space-x-12">
+            <div className="flex flex-col-reverse md:flex-row-reverse md:space-x-12">
             {/* Contact Form */}
             <motion.div 
-                className='md:w-1/2 md:px-4'
+                className='md:w-1/2 mt-12 md:mt-0 md:px-4'
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -45,7 +45,7 @@ const Contact = () => {
             >
                 <form ref={form} onSubmit={sendEmail} className="space-y-5">
                     {/* <div className='flex flex-col md:flex-row gap-3'> */}
-                    <div className='flex gap-5'>
+                    <div className='flex flex-col sm:flex-row gap-5'>
                         <div className='w-full'>
                             {/* <label htmlFor="name" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">Name</label> */}
                             <input placeholder='Your Name' type="text" id="name" name="name" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
@@ -55,7 +55,7 @@ const Contact = () => {
                             <input placeholder='Email Address' type="email" id="email" name="email" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
                         </div>
                     </div>
-                    <div className='flex gap-5'>
+                    <div className='flex flex-col sm:flex-row gap-5'>
                         <div className='w-full'>
                             {/* <label htmlFor="phone" className="block text-sm md:text-lg lg:text-xl font-medium text-gray-300">PHone Number</label> */}
                             <input placeholder='Phone Number' type="tel" id="phone" name="phone" className="mt-1 block w-full px-3 py-4 border-[0.5px] bg-white border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-[#ffaa17] focus:border-[#ffaa17] text-black" required />
@@ -81,7 +81,7 @@ const Contact = () => {
 
             {/* Contact Info */}
             <motion.div 
-                className='md:w-1/2 mt-12 md:mt-0 relative z-0'
+                className='md:w-1/2 relative z-0'
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
@@ -104,7 +104,7 @@ const Contact = () => {
                             </a>
                             <div className="flex flex-col items-left justify-center">
                                 <span className="font-medium text-white text-xl">Facebook:</span>
-                                <span className="text-gray-300 text-xl">atmospvt.com</span>
+                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
                             </div>
                         </div>
                         <div className='flex gap-5'>
@@ -113,7 +113,7 @@ const Contact = () => {
                             </a>
                             <div className="flex flex-col items-left justify-center">
                                 <span className="font-medium text-white text-xl">Instagram:</span>
-                                <span className="text-gray-300 text-xl">+129 455 99554</span>
+                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
                             </div>
                         </div>
                         <div className='flex gap-5'>
