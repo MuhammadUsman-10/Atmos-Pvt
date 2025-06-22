@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
-import '../index.css';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const stats = [
   { value: '8705', label: 'Projects Completed' },
@@ -29,51 +29,24 @@ const checklist = [
 ];
 
 const StatsParallax = () => {
-  const sectionRef = useRef(null);
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const scrollOffset = (windowHeight - rect.top) * 0.25;
-        setOffset(scrollOffset);
-      } else {
-        setOffset(0);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
-    <section
-      ref={sectionRef}
-      className="relative bg-image -z-10 w-full flex flex-col justify-center items-center overflow-hidden py-12 md:py-20"
-    >
-      {/* Parallax Background */}
-      {/* <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: "url('/bg-image-1.png')",
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: `center ${-offset}px`,
-          transition: 'background-position 0.1s linear',
-        }}
-      /> */}
+    <section ref={ref} className="relative bg-image -z-10 w-full flex flex-col justify-center items-center overflow-hidden py-12 md:py-20">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80 opacity-80 -z-0" />
+      <div className="absolute inset-0 bg-black/90 opacity-80 -z-0" />
 
       {/* Stats Row */}
       <div className="relative z-10 container mx-auto lg:px-16 xl:px-18">
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 py-8 px-4 md:px-0 mb-8">
-          {stats.map((stat, i) => (
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 py-8 px-4 md:px-0 mb-8">
+          {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center justify-center text-center">
-              <span className="text-white text-4xl md:text-5xl font-bold">{stat.value}</span>
+              <span className="text-white text-4xl md:text-5xl font-bold">
+                <CountUp
+                  start={inView ? 0 : null}
+                  end={parseInt(stat.value, 10)}
+                  duration={2}
+                  separator="," />
+              </span>
               <span className="text-white text-xs md:text-sm font-semibold mt-2 uppercase tracking-wider opacity-80">{stat.label}</span>
             </div>
           ))}
@@ -83,10 +56,10 @@ const StatsParallax = () => {
         <div className='container mx-auto px-6 lg:px-16 xl:px-18'>
         <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 md:gap-0 bg-transparent z-10">
           {/* Left: Commitment & Features */}
-          <div className="flex-1 flex flex-col gap-8">
+          <div className="flex-1 flex flex-col gap-8 md:gap-11">
             {/* Commitment Box */}
-            <div className="relative bg-[#ffaa17] rounded-tl-lg rounded-tr-lg rounded-bl-2xl rounded-br-lg shadow-lg px-6 py-8 md:py-12 md:px-8 w-full max-w-md text-left">
-              <span className="block text-lg md:text-xl font-semibold text-[#111] leading-snug">
+            <div className="relative bg-[#ffaa17] rounded-tl-lg rounded-tr-lg rounded-bl-2xl rounded-br-lg shadow-lg px-6 py-8 md:py-12 md:px-8 w-full max-w-sm lg:max-w-md text-left">
+              <span className="block text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-[#111] leading-snug">
                 WE'RE COMMITTED TO DELIVER<br />
                 HIGH QUALITY PROJECTS.
               </span>
@@ -108,13 +81,13 @@ const StatsParallax = () => {
             </div>
           </div>
           {/* Right: Trust/Testimonial Section */}
-          <div className="flex-1 flex flex-col gap-6 md:pl-12">
-            <div>
-              <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-2">
+          <div className="flex-1 flex flex-col gap-6 xl:gap-5 xxl:gap-4 md:pl-12">
+            <div className=''>
+              <h2 className="text-white text-2xl sm:text-3xl lg:text-[33px] xl:text-[46px] xxl:text-5xl font-bold leading-tight mb-2">
                 WE'RE TRUSTED BY MORE
                 THAN <span className="text-[#ffaa17]">6260 CLIENTS</span>.
               </h2>
-              <p className="text-[#ffaa17] text-xs md:text-sm lg:w-[75%] mb-2">
+              <p className="text-[#ffaa17] text-xs sm:text-sm md:text-base xl:text-xl xs:w-[85%] lg:w-[90%] xl:w-full xxl:w-[90%] mb-2">
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, simply free text by injected humour, or randomised.
               </p>
             </div>

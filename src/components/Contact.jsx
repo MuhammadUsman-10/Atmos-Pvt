@@ -99,30 +99,30 @@ const Contact = () => {
                     </p>
                     <div className="space-y-5">
                         <div className='flex gap-5'>
-                            <div className='flex items-center justify-center px-[22px] py-5 bg-[#ffaa17] rounded-full'>
-                                <i className='fas fa-map-marker-alt' />
-                            </div>
+                            <a href='https://www.facebook.com/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                                <i className='fab fa-facebook' />
+                            </a>
                             <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">Email:</span>
-                                <span className="text-gray-300 text-xl">info@atmospvt.com</span>
+                                <span className="font-medium text-white text-xl">Facebook:</span>
+                                <span className="text-gray-300 text-xl">atmospvt.com</span>
                             </div>
                         </div>
                         <div className='flex gap-5'>
-                            <div className='flex items-center justify-center px-[22px] py-5 bg-[#ffaa17] rounded-full'>
-                                <i className='fas fa-map-marker-alt' />
-                            </div>
+                            <a href='https://www.instagram.com/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                                <i className='fab fa-instagram' />
+                            </a>
                             <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">Phone:</span>
+                                <span className="font-medium text-white text-xl">Instagram:</span>
                                 <span className="text-gray-300 text-xl">+129 455 99554</span>
                             </div>
                         </div>
                         <div className='flex gap-5'>
-                            <div className='flex items-center justify-center px-[22px] py-5 bg-[#ffaa17] rounded-full'>
-                                <i className='fas fa-map-marker-alt' />
-                            </div>
+                            <a href='https://www.linkedin.com/company/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                                <i className='fab fa-linkedin-in' />
+                            </a>
                             <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">Location:</span>
-                                <span className="text-gray-300 text-xl">Pakistan</span>
+                                <span className="font-medium text-white text-xl">LinkedIn:</span>
+                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
                             </div>
                         </div>
                     </div>

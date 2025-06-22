@@ -1,33 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-
 const TeamQuoteParallax = () => {
-    const sectionRef = useRef(null);
-    const [offset, setOffset] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-        if (!sectionRef.current) return;
-
-        const rect = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Only apply parallax if section is visible
-        if (rect.top < windowHeight && rect.bottom > 0) {
-            const scrollOffset = (windowHeight - rect.top) * 0.25;
-            setOffset(scrollOffset);
-        } else {
-            setOffset(0); // Don't shift if not in view
-        }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Run once on mount
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
-        <section ref={sectionRef} className="relative w-full h-[300px] md:h-[500px] overflow-hidden">
+        <section className="relative w-full h-[300px] md:h-[500px] overflow-hidden">
         {/* Background Image with parallax */}
         <div
             className="absolute inset-0 -z-10"
@@ -35,13 +8,11 @@ const TeamQuoteParallax = () => {
                 backgroundImage: "url('/bg-image-2.png')",
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: `center ${-offset}px`,
-                transition: 'background-position 0.1s linear',
             }}
         />
 
         {/* Overlay for dark effect */}
-        <div className="absolute inset-0 bg-black/80 opacity-60 -z-0" />
+        <div className="absolute inset-0 bg-black/80 opacity-80 -z-0" />
         {/* <div className='relative z-10 container mx-auto my-auto px-6 lg:px-16 xl:px-18'> */}
 
         {/* Actual content */}
