@@ -3,18 +3,18 @@ import { motion } from 'framer-motion';
 
 const WhoWeAre = () => {
     return (
-        <div className='bg-white h-[1190px] xxs:h-[1150px] xs:h-[980px] xsm:h-[900px] sm:h-auto lg:h-[600px]'>
+        <div className='bg-white h-[1190px] xxs:h-[1150px] xs:h-[980px] xsm:h-[700px] sm:h-[650px] lg:h-[600px]'>
         <div className="pb-60 sm:pb-0 py-10 sm:py-10 lg:mb-16">
             <div className="container mx-auto px-6">
-                <motion.div className='flex flex-col-reverse lg:flex-row justify-between gap-8 md:gap-8'>
+                <motion.div className='flex flex-col-reverse lg:flex-row justify-between gap-12 md:gap-8'>
                     <motion.div 
                         className='w-full lg:w-1/2'
                     >
                         <div className='lg:relative w-full h-[200px] sm:h-[260px] md:h-[280px] lg:h-[200px] xl:h-[100px] 2xl:h-[250px]'>
-                            <div className='flex flex-col gap-7 lg:gap-0 sm:flex-row md:justify-center lg:block lg:absolute lg:bottom-0 lg:left-0'>
+                            <div className='flex flex-col gap-7 lg:gap-0 xsm:flex-row md:justify-center lg:block lg:absolute lg:bottom-0 lg:left-0'>
                                 <motion.img 
                                     src="/about-image-1.png" alt="About Image 1" 
-                                    className="rounded-lg w-[280px] h-[220px] lg:w-[280px] lg:h-[300px] xl:w-[350px] xl:h-[380px] lg:translate-x-40 xl:translate-x-50 lg:translate-y-25 xl:translate-y-70 2xl:translate-x-80 2xl:translate-y-30 " 
+                                    className="rounded-lg w-full xsm:w-[250px] sm:w-[280px] h-[220px] lg:w-[280px] lg:h-[300px] xl:w-[350px] xl:h-[380px] lg:translate-x-40 xl:translate-x-50 lg:translate-y-25 xl:translate-y-70 2xl:translate-x-80 2xl:translate-y-30 " 
                                     initial={{ x: -100, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
                                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -22,7 +22,7 @@ const WhoWeAre = () => {
                                 />
                                 <motion.img 
                                     src="/about-image-2.png" alt="About Image 2" 
-                                    className="rounded-lg w-[300px] h-[220px] lg:w-[280px] xl:w-[350px] lg:absolute xl:-bottom-90 2xl:-bottom-50 lg:left-15 xl:left-20 2xl:left-50" 
+                                    className="rounded-lg w-full xsm:w-[250px] sm:w-[300px] h-[220px] lg:w-[280px] xl:w-[350px] lg:absolute xl:-bottom-90 2xl:-bottom-50 lg:left-15 xl:left-20 2xl:left-50" 
                                     initial={{ y: 100, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -39,10 +39,10 @@ const WhoWeAre = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-2xl md:text-4xl font-semibold text-black mb-10">
-                            Who We Are
+                            Who <span className='text-[#ffaa17]'>We</span> Are
                         </h2>
-                        <p className="xl:w-[85%] text-base md:text-xl text-black mb-4">
-                            <strong>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> was founded by Haseeb Ahmad, a seasoned operations professional who’s worked hands-on with U.S.-based security firms—tackling everything from dispatch gaps and scheduling bottlenecks to overnight coverage and admin overload. Seeing these challenges firsthand, he launched ATMOS to deliver precision-driven, cost-effective support that plugs right into your existing operations.
+                        <p className="xl:w-[85%] text-base md:text-xl text-black mb-4 font-inter">
+                            <strong className='text-[#ffaa17]'>ATMOS Pvt (Advanced Task Management & Outsourcing Services)</strong> was founded by Haseeb Ahmad, a seasoned operations professional who’s worked hands-on with U.S.-based security firms—tackling everything from dispatch gaps and scheduling bottlenecks to overnight coverage and admin overload. Seeing these challenges firsthand, he launched ATMOS to deliver precision-driven, cost-effective support that plugs right into your existing operations.
                         </p>
                         <div className='flex flex-col xs:flex-row justify-between gap-10 lg:gap-20 relative items-center'>
                             <div className='w-full md:w-1/2 text-black'>

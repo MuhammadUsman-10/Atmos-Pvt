@@ -97,33 +97,37 @@ const Contact = () => {
                         If you're thinking, “This could work for us” — you're probably right.
                         Fill the form and we'll reach out soon.
                     </p>
-                    <div className="space-y-5">
-                        <div className='flex gap-5'>
-                            <a href='https://www.facebook.com/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                    <div className='flex flex-col gap-8'>
+                        <div className="space-y-5">
+                            <div className='flex gap-5'>
+                                <a href='' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] border border-[#ffaa17] hover:text-[#ffaa17] hover:bg-transparent hover:border-[#ffaa17] rounded-full'>
+                                    <i className='far fa-envelope' />
+                                </a>
+                                <div className="flex flex-col items-left justify-center">
+                                    <span className="font-medium text-white text-xl">Email:</span>
+                                    <span className="text-gray-300 text-xl">infor@atmospvt.com</span>
+                                </div>
+                            </div>
+                            <div className='flex gap-5'>
+                                <a href='' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] border border-[#ffaa17] hover:text-[#ffaa17] hover:bg-transparent hover:border-[#ffaa17] rounded-full'>
+                                    <i className='fas fa-phone' />
+                                </a>
+                                <div className="flex flex-col items-left justify-center">
+                                    <span className="font-medium text-white text-xl">Phone:</span>
+                                    <span className="text-gray-300 text-xl">+129 455 99554</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex gap-5 px-3'>
+                            <a href='https://www.facebook.com/atmos' target='_blank' className='text-3xl text-white hover:text-[#ffaa17]'>
                                 <i className='fab fa-facebook' />
                             </a>
-                            <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">Facebook:</span>
-                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
-                            </div>
-                        </div>
-                        <div className='flex gap-5'>
-                            <a href='https://www.instagram.com/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                            <a href='https://www.instagram.com/atmos' target='_blank' className='text-3xl text-white hover:text-[#ffaa17]'>
                                 <i className='fab fa-instagram' />
                             </a>
-                            <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">Instagram:</span>
-                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
-                            </div>
-                        </div>
-                        <div className='flex gap-5'>
-                            <a href='https://www.linkedin.com/company/atmos' target='_blank' className='flex items-center justify-center p-6 bg-[#ffaa17] rounded-full'>
+                            <a href='https://www.linkedin.com/company/atmos' target='_blank' className='text-3xl text-white hover:text-[#ffaa17]'>
                                 <i className='fab fa-linkedin-in' />
                             </a>
-                            <div className="flex flex-col items-left justify-center">
-                                <span className="font-medium text-white text-xl">LinkedIn:</span>
-                                <span className="text-gray-300 text-xl">ATMOS Pvt</span>
-                            </div>
                         </div>
                     </div>
                 </div>
